@@ -39,7 +39,7 @@ image: ""
 	</div>
       </div>
     </section><!-- /home -->
-<!--
+
     <section id="news">
       <div class="page-header">
 	<h1>News</h1>
@@ -47,13 +47,14 @@ image: ""
 
       {% capture news_block %}{% include news.md %}{% endcapture %}
       {{ news_block | markdownify }}
-    </section>
+    </section><!-- news -->
 
     <section id="research">
       <div class="page-header">
 	<h1>Research</h1>
       </div>
       
+      <!--h3>Research interests</h3-->
       {% capture interests_block %}{% include interests.md %}{% endcapture %}
       {{ interests_block | markdownify }}
 
@@ -62,7 +63,7 @@ image: ""
 
       {% capture papers_block %}{% include papers.md %}{% endcapture %}
       {{ papers_block | markdownify }}
-    </section>
+    </section><!-- research -->
 
     <section id="teaching">
       <div class="page-header">
@@ -70,7 +71,7 @@ image: ""
       </div>
       {% capture teaching_block %}{% include teaching.md %}{% endcapture %}
       {{ teaching_block | markdownify }}
-    </section>
+    </section><!-- teaching -->
 
     <section id="software">
       <div class="page-header">
@@ -78,7 +79,7 @@ image: ""
       </div>
       {% capture software_block %}{% include software.md %}{% endcapture %}
       {{ software_block | markdownify }}
-    </section>
+    </section><!-- software -->
 
     <section id="talks">
       <div class="page-header">
@@ -89,8 +90,8 @@ image: ""
 
       {% capture talks_block %}{% include talks.md %}{% endcapture %}
       {{ talks_block | markdownify }}
-    </section>
--->
+    </section><!-- talks -->
+
   </div>
 
   <nav class="span1 side-nav">
