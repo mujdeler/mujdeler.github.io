@@ -1,0 +1,115 @@
+---
+title: Luca De Feo
+layout: main
+scrollspy: .side-nav
+excerpt: Luca De Feo is Maître de Conférences in Computer Science at Université de Versailles. He works on Algorithmic number theory, computer algebra and cryptolgy. He blogs on these subjects and on information technology.
+image: /img/luca-drink.jpg
+---
+
+<div class="container">
+<div class="row">
+
+  <div class="offset1 span9">
+    <section class="hero-unit">
+      <div class="row-fluid">
+	<div class="span6 text-center vcard">
+	  <div class="page-header">
+	    <h2 class="fn">Luca De Feo</h2>
+	  </div>
+
+	  {% include address_card.html %}
+	</div>
+	
+	<div class="span6 text-center">
+	  <img src="img/luca-drink.jpg" class="img-rounded photo" alt="Picture of Luca De Feo">
+	</div>
+      </div>
+
+      <hr>
+
+      <div id="whoami" class="pretty">
+	<div style="display:none">
+	  <p><a href="javascript:void(0)">Hi, I am
+	      Luca... <i class="icon-chevron-down"></i></a></p>
+	</div>
+
+	<div>
+	  {% capture welcome_block %}{% include welcome.md %}{% endcapture %}
+	  {{ welcome_block | markdownify }}
+	</div>
+      </div>
+    </section><!-- /home -->
+
+    <section id="news">
+      <div class="page-header">
+	<h1>News</h1>
+      </div>
+
+      {% capture news_block %}{% include news.md %}{% endcapture %}
+      {{ news_block | markdownify }}
+    </section><!-- news -->
+
+    <section id="research">
+      <div class="page-header">
+	<h1>Research</h1>
+      </div>
+      
+      <!--h3>Research interests</h3-->
+      {% capture interests_block %}{% include interests.md %}{% endcapture %}
+      {{ interests_block | markdownify }}
+
+      {% capture students_block %}{% include students.md %}{% endcapture %}
+      {{ students_block | markdownify }}
+
+      {% capture papers_block %}{% include papers.md %}{% endcapture %}
+      {{ papers_block | markdownify }}
+    </section><!-- research -->
+
+    <section id="teaching">
+      <div class="page-header">
+	<h1>Teaching</h1>
+      </div>
+      {% capture teaching_block %}{% include teaching.md %}{% endcapture %}
+      {{ teaching_block | markdownify }}
+    </section><!-- teaching -->
+
+    <section id="software">
+      <div class="page-header">
+	<h1>Software</h1>
+      </div>
+      {% capture software_block %}{% include software.md %}{% endcapture %}
+      {{ software_block | markdownify }}
+    </section><!-- software -->
+
+    <section id="talks">
+      <div class="page-header">
+	<h1>Selected Talks</h1>
+      </div>
+      <p>See also my collection of vulgarization material
+       at <a href="http://defeo.lu/docet">defeo.lu/docet</a>.</p>
+
+      {% capture talks_block %}{% include talks.md %}{% endcapture %}
+      {{ talks_block | markdownify }}
+    </section><!-- talks -->
+
+  </div>
+
+  <nav class="span1 side-nav">
+    <ul class="nav nav-tabs nav-stacked affix-top hidden-phone" data-spy="affix">
+      <li class="active"><a href="#"><i class="icon-arrow-up"></i> Top</a></li>
+      <li><a href="#whoami"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#whoami" title="Who am I">W</span>ho am I</a></li>
+      <li><a href="#news"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#news" title="News">N</span>ews</a></li>
+      <li><a href="#research"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#research" title="Research">R</span>esearch</a></li>
+      <li><a href="#teaching"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#teaching" title="Teaching">T</span>eaching</a></li>
+      <li><a href="#software"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#software" title="Software">S</span>oftware</a></li>
+      <li><a href="#talks"><i class="icon-chevron-left"></i> Tal<span data-toggle="hotkey"
+	      href="#talks" title="Talks">k</span>s</a></li>
+    </ul>
+  </nav>
+</div>
+</div> <!-- /container -->

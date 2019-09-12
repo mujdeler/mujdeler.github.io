@@ -1,0 +1,48 @@
+{
+
+ "_posts/2016-10-31-internship-RS.md": {
+  "id" : "/blog/internship/internship-RS",
+  "title" : "Stage de M2 – Protocoles d'échange de clefs à base d'isogénies",
+  "url" : "/blog/internship/internship-RS",
+  "date" : "2016-10-31 00:00:00 -0500",
+  "categories" : ["internship"],
+  "tags" : ["research","isogenies"]
+ },
+
+ "_posts/2014-06-11-8-weeks-with-C9.md": {
+  "id" : "/blog/8-weeks-with-C9",
+  "title" : "8 weeks and 60 students with Cloud9",
+  "url" : "/blog/8-weeks-with-C9",
+  "date" : "2014-06-11 00:00:00 -0500",
+  "categories" : [],
+  "tags" : ["web","teaching"]
+ },
+
+ "_posts/2014-06-10-8-weeks-coding.md": {
+  "id" : "/blog/8-weeks-coding",
+  "title" : "8 weeks, 60 students and 1 web application",
+  "url" : "/blog/8-weeks-coding",
+  "date" : "2014-06-10 00:00:00 -0500",
+  "categories" : [],
+  "tags" : ["web","teaching"]
+ },
+
+ "_posts/2014-06-05-8-weeks-w-silex.md": {
+  "id" : "/blog/8-weeks-w-silex",
+  "title" : "8 weeks and 60 students with Silex",
+  "url" : "/blog/8-weeks-w-silex",
+  "date" : "2014-06-05 00:00:00 -0500",
+  "categories" : [],
+  "tags" : ["web","teaching"]
+ },
+
+ "_posts/2013-06-28-the-website-opens.md": {
+  "id" : "/blog/the-website-opens",
+  "title" : "The Website Opens",
+  "url" : "/blog/the-website-opens",
+  "date" : "2013-06-28 00:00:00 -0500",
+  "categories" : [],
+  "tags" : []
+ }
+
+}

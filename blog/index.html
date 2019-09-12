@@ -1,0 +1,50 @@
+---
+layout: blog
+title: Luca De Feo's blog
+excerpt: Luca De Feo's blog on science, mathematical software, web programming… 
+share: /blog
+---
+
+<div class="row">
+  <div class="offset1 span8">
+
+    {% for post in site.posts %}
+    <article class="post" id="post-{{forloop.index}}" data-id="{{post.id}}">
+      <h1>{{post.title}} 
+	<small>{{post.date | date:"%B %d, %Y" | replace_first:" 0"," "}}</small>
+      </h1>
+
+      {{post.content}}
+
+      <footer>
+	<!--div class="addthis_toolbox addthis_default_style"
+	     addthis:url="http:{{site.base}}{{post.url}}"
+	     addthis:title="{{post.title}}">
+	  {% include addthis-buttons.html %}
+	  <a class="addthis_counter addthis_bubble_style"></a>
+	</div-->
+
+	<span class="permalink"><a href="{{post.url}}">permalink</a></span>
+	<div class="tags"><i class="icon-tags"></i> tags:
+	  <ul class="inline">
+	    {% for tag in post.tags %}
+	    <li><a href="/blog/tag/{{tag}}">{{tag}}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+	<span class="comments"><i class="icon-comment"></i> 
+	  <a href="{{post.url}}">see comments</a>
+	</span>
+      </footer>
+    </article>
+    {% endfor %}
+    
+    
+  </div>
+
+  <div class="span2">
+    
+    {% include blog-nav.html %}
+
+  </div>
+</div>

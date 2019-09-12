@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head lang="en" prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ page.title }}</title>
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta name="twitter:card" content="summary">
+    {% if page.is_post %}
+    <meta property="og:type" content="article">
+    {% endif %}
+    <link rel="author" href="/"> 
+    <link rel="me" href="/">
+    <!--link rel="me" href="https://plus.google.com/100246861993995854455?rel=author"-->
+    <link rel="me" href="https://github.com/defeo">
+    <link rel="me" href="https://twitter.com/@luca_defeo">
+    <meta name="twitter:site" content="{{ site.twitter_user }}">
+    <meta name="twitter:creator" content="{{ site.twitter_user }}">
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}">
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image" content="http:{{ site.base }}{{ page.image }}">
+    <meta property="og:image" content="http:{{ site.base }}{{ page.image }}">
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      body {
+      padding-top: 60px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    {% for style in page.styles %}
+    <link rel="stylesheet" href="{{ style }}">
+    {% endfor %}
+
+    <link rel="alternate" type="application/rss+xml" title="Luca De Feo's blog" href="/blog/feed.xml">
+
+    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body {% if page.scrollspy %} data-spy="scroll" data-target="{{page.scrollspy}}" {% endif %}>
+
+    <!-- Global hotkey shortcuts -->
+    <span data-toggle="hotkey" data-hotkey="? shift+?" data-hotkey-trigger="hotkey.help" title="Help"></span>
+    <span data-toggle="hotkey" data-hotkey-special="/" data-hotkey-focus="#search-field" title="Search"></span>
+    <span data-toggle="hotkey" data-hotkey-special="home" href="#" title="Go to top"></span>
+    <span data-toggle="hotkey" data-hotkey-special="esc" data-hotkey-selector="input" data-hotkey-trigger="hotkey.blur" title="Unfocus text fields"></span>
+    <span data-toggle="hotkey" title="––––"></span>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </a>
+	  <a class="brand" href="/">Luca De Feo</a>
+	  <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li {% if page.url == "/index.html"  %} class="active" {% endif %}><a href="/"><i class="icon-home"></i> <span data-toggle="hotkey" href="/" title="Home">H</span>ome</a></li>
+	      <li {% if page.url contains "/blog"  %} class="active" {% endif %}><a href="/blog"><i class="icon-pencil"></i> <span data-toggle="hotkey" href="/blog" title="Blog">B</span>log</a></li>
+              <li {% if page.url ==    "/cv.html"  %} class="active" {% endif %}><a href="/cv.html"><i class="icon-user"></i> <span data-toggle="hotkey" href="/cv.html" title="CV">C</span>V</a></li>
+            </ul>
+	    <span data-toggle="hotkey" title="––––"></span>
+
+	    <ul id="nav-buttons" class="nav pull-right">
+	      <li>
+		<button id="hotkeys-btn" class="btn btn-inverse" title="Activate keyboard shortcuts"><i class="icon-th"></i></button>
+	      </li>
+	    </ul>
+	    
+	    <form id="search-form" class="navbar-search pull-right" action="https://www.google.com/search">
+	      <input id="search-field" type="search" class="input-medium search-query" placeholder="Site Search" name="q">
+	      <input type="hidden" name="q" value="site:defeo.lu">
+	      <button id="search-glass" type="submit"><i class="icon-search"></i><span style="display:none">Search</span></button>
+	    </form>
+	  </div><!--/.nav-collapse -->
+	</div>
+      </div>
+    </nav>
+
+      {{ content }}
+
+    <footer class="footer">
+      <div class="container">
+	<p><a rel="license"
+	   href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">
+	  <img alt="Creative Commons Licence" style="border-width:0"
+	       src="https://i.creativecommons.org/l/by/3.0/80x15.png"/>
+	</a> <a href="/">Luca De Feo</a> 2013, licensed
+	under <a rel="license"
+	href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">CC
+	BY 3.0</a>.</p>
+	
+	<p>Website designed and built
+	  by <a href="https://github.com/defeo">Luca De Feo</a>,
+	  with the help
+	  of <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+	  and <a href="http://www.initializr.com/">initializr</a>.</p>
+	<p>Source code available
+	  on <a href="https://github.com/defeo/defeo.github.io">GitHub</a>,
+	  static Website generated
+	  with <a href="http://jekyllrb.com/">Jekyll</a> and kindly
+	  hosted by <a href="http://pages.github.com/">GitHub</a>.</p>
+
+	<!--div class="addthis_toolbox addthis_default_style"
+	     addthis:url="http:{{site.base}}{% if page.share %}{{page.share}}{% else %}{{page.url | replace:'/index.html','/'}}{% endif %}">
+	  Share this page: 
+	  {% include addthis-buttons.html %}
+	</div-->
+      </div>
+    </footer>
+      
+    <!-- Key shortcuts help modal -->
+    <div id="hotkey-help" data-toggle="modal" class="modal hide fade"
+	 tabindex="-1" aria-labelledby="myModalLabel"
+	 aria-hidden="true">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"
+		aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Keayboard shortcuts</h3>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="/js/jquery.hotkeys/jquery.hotkeys.js"></script>
+
+      <script src="/js/vendor/bootstrap.min.js"></script>
+
+      {% for script in page.scripts %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+
+      {% if page.mathjax %}
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+          config: ["MMLorHTML.js"],
+          jax: ["input/TeX","input/AsciiMath","output/HTML-CSS","output/NativeMML"],
+          extensions: ["MathMenu.js","MathZoom.js"],
+          TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+          Macros: {% include tex-macros.json %}
+          }
+	  });
+	</script>
+	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+      {% endif %}
+
+      <script src="/js/main.js"></script>
+
+      <!--script>
+        var _gaq=[['_setAccount','UA-41256499-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script-->
+
+      <!-- AddThis Customization -->
+      <!--script type="text/javascript">
+	var addthis_config = {
+	  services_exclude: 'email,gmail,print',
+	  ui_click:         true,             // do not show addthis popup on hover
+	  data_ga_tracker:  'UA-41256499-1',  // GA integration
+	  data_ga_social:   true,
+	};
+      </script>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51bbb5b707779db5"></script-->
+
+  </body>
+</html>

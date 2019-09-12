@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head lang="en" prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="twitter:title" content="">
+    <meta property="og:title" content="">
+    <meta name="twitter:card" content="summary">
+    
+    <link rel="author" href="/"> 
+    <link rel="me" href="/">
+    <!--link rel="me" href="https://plus.google.com/100246861993995854455?rel=author"-->
+    <link rel="me" href="https://github.com/defeo">
+    <link rel="me" href="https://twitter.com/@luca_defeo">
+    <meta name="twitter:site" content="@zekidem20379657">
+    <meta name="twitter:creator" content="@zekidem20379657">
+    
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      body {
+      padding-top: 60px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Luca De Feo's blog" href="/blog/feed.xml">
+
+    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body >
+
+    <!-- Global hotkey shortcuts -->
+    <span data-toggle="hotkey" data-hotkey="? shift+?" data-hotkey-trigger="hotkey.help" title="Help"></span>
+    <span data-toggle="hotkey" data-hotkey-special="/" data-hotkey-focus="#search-field" title="Search"></span>
+    <span data-toggle="hotkey" data-hotkey-special="home" href="#" title="Go to top"></span>
+    <span data-toggle="hotkey" data-hotkey-special="esc" data-hotkey-selector="input" data-hotkey-trigger="hotkey.blur" title="Unfocus text fields"></span>
+    <span data-toggle="hotkey" title="––––"></span>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </a>
+	  <a class="brand" href="/">Luca De Feo</a>
+	  <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="/"><i class="icon-home"></i> <span data-toggle="hotkey" href="/" title="Home">H</span>ome</a></li>
+	      <li ><a href="/blog"><i class="icon-pencil"></i> <span data-toggle="hotkey" href="/blog" title="Blog">B</span>log</a></li>
+              <li ><a href="/cv.html"><i class="icon-user"></i> <span data-toggle="hotkey" href="/cv.html" title="CV">C</span>V</a></li>
+            </ul>
+	    <span data-toggle="hotkey" title="––––"></span>
+
+	    <ul id="nav-buttons" class="nav pull-right">
+	      <li>
+		<button id="hotkeys-btn" class="btn btn-inverse" title="Activate keyboard shortcuts"><i class="icon-th"></i></button>
+	      </li>
+	    </ul>
+	    
+	    <form id="search-form" class="navbar-search pull-right" action="https://www.google.com/search">
+	      <input id="search-field" type="search" class="input-medium search-query" placeholder="Site Search" name="q">
+	      <input type="hidden" name="q" value="site:defeo.lu">
+	      <button id="search-glass" type="submit"><i class="icon-search"></i><span style="display:none">Search</span></button>
+	    </form>
+	  </div><!--/.nav-collapse -->
+	</div>
+      </div>
+    </nav>
+
+      <div class="container">
+<div class="row">
+
+  <div class="offset1 span9">
+    <section class="hero-unit">
+      <div class="row-fluid">
+	<div class="span6 text-center vcard">
+	  <div class="page-header">
+	    <h2 class="fn">Luca De Feo</h2>
+	  </div>
+
+	  <address class="adr ir">
+  <strong class="title">Maître de Conférences en Informatique</strong><br>
+  
+  <a href="http://www.uvsq.fr/" class="org">Université de Versailles – Saint-Quentin</a><br/>
+  <a href="http://lmv.math.cnrs.fr/">Équipe CRYPTO – Laboratoire LMV</a><br>
+  <span class="extended-address">bureau 309 B</span><br />
+  <span class="street-address">45 Avenue des États-Unis</span><br/>
+  <span class="postal-code">78035</span> 
+  <span class="locality">Versailles</span> Cedex,
+  <span class="country-name">France</span><br>
+</address>
+
+<address class="ir">
+  <strong>tel:</strong> <span class="tel">+33&nbsp;1&nbsp;39&nbsp;25&nbsp;40&nbsp;35</span><br>
+  <strong>fax:</strong> <span class="fax">+33&nbsp;1&nbsp;39&nbsp;25&nbsp;40&nbsp;57</span><br>
+  <strong>email:</strong> <span id='mungemail'></span>
+  <noscript>name.surname-with-a-dash &lt;at&gt; uvsq.fr</noscript><br>
+  <strong>ORCiD:</strong> <a class="orcid" href="https://orcid.org/0000-0002-9321-0773">
+    0000-0002-9321-0773</a><br>
+  <strong>twitter:</strong> <a class="twitter" href="https://twitter.com/@luca_defeo">
+    @luca_defeo</a><br>
+  <strong>github:</strong> <a class="github" href="https://github.com/defeo">@defeo</a><br>
+  <strong>keybase:</strong> <a class="keybase" href="https://keybase.io/defeo">defeo</a>
+  <span id="www"><br>
+  <strong>www:</strong> <a class="url" href="/">http://defeo.lu/</a>
+  </span>
+</address>
+
+	</div>
+	
+	<div class="span6 text-center">
+	  <img src="img/luca-drink.jpg" class="img-rounded photo" alt="Picture of Luca De Feo">
+	</div>
+      </div>
+
+      <hr>
+
+      <div id="whoami" class="pretty">
+	<div style="display:none">
+	  <p><a href="javascript:void(0)">Hi, I am
+	      Luca... <i class="icon-chevron-down"></i></a></p>
+	</div>
+
+	<div>
+	  
+	  
+<p>Hi, I am Luca. I am <em>maître de conférences</em> (the French equivalent of
+assistant professor) in the Computer Science department of Université
+de Versailles.</p>
+
+<p>As part of my research, I work on
+<a href="javascript:void(0)" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="manual" data-original-title="Algorithmic Number Theory" data-content="The
+study of algorithms for performing number theoretic computations
+(e.g. integer factorization), and of their applications. The &lt;a
+href='http://en.wikipedia.org/wiki/Algorithmic_Number_Theory_Symposium'&gt;ANTS
+conference series&lt;/a&gt; is the major conference in the domain">Algorithmic Number Theory</a>,
+<a href="javascript:void(0)" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="manual" data-original-title="Computer Algebra" data-content="The study of algorithms for the &lt;em&gt;symbolic
+manipulation&lt;/em&gt; of mathematical expressions and other mathematical
+objects.  The &lt;a href='http://www.issac-conference.org/'&gt;ISSAC
+conference series&lt;/a&gt; is the major conference in the domain.">Computer Algebra</a> and
+<a href="javascript:void(0)" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="manual" data-original-title="Cryptology" data-content="The study of algorithms for &lt;em&gt;secure&lt;/em&gt;
+communication in presence of &lt;em&gt;adversaries&lt;/em&gt;. &lt;a
+href='http://en.wikipedia.org/wiki/Cryptography'&gt;Wikipedia
+page&lt;/a&gt;.">Cryptology</a>.
+Read more about it in the <a href="#research">research</a> section.</p>
+
+<p>Being some kind of nerd, I am also interested in almost everything
+related to Information Technology. I am fluent in many programming
+languages, I enjoy learning new ones, and most of all I love mixing
+them in the context of
+<a href="javascript:void(0)" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="manual" data-original-title="Web Programming" data-content="The art of
+programming applications for the Word Wide Web, including applications
+running inside browsers, and web services. &lt;a
+href='http://en.wikipedia.org/wiki/Web_development'&gt;Wikipedia
+page&lt;/a&gt;.">web programming</a>.
+Part of my passion for these subjects flows into the
+courses I <a href="#teaching">teach</a>, and the <a href="#software">software</a> I write in
+my (rare) spare time.</p>
+
+<p>And, like most nerds, I tend to <strong>share out loud</strong> my thoughts on the
+things I like. You can read more about science, maths, computer
+science, web programming, etc. in my <a href="/blog"><strong>blog</strong></a>.</p>
+
+
+	</div>
+      </div>
+    </section><!-- /home -->
+
+    <section id="news">
+      <div class="page-header">
+	<h1>News</h1>
+      </div>
+
+      
+      <p><strong>June 04, 2019</strong>: <em>How to prove a secret isogeny</em>, talk at <a href="https://ctcrypt.ru/">CTCrypt
+2019</a>. Slides here: <a href="https://defeo.lu/docet">https://defeo.lu/docet</a>.</p>
+
+<p><strong>May 23, 2019</strong>: <em>SeaSign: Compact isogeny signatures from class
+group actions</em>, talk at <a href="https://eurocrypt.iacr.org/2019/">Eurocrypt
+2019</a>. Slides here:
+<a href="https://defeo.lu/docet">https://defeo.lu/docet</a>.</p>
+
+<p><strong>March 18, 2019:</strong> <em>Isogeny graphs in cryptography</em>, 3 hours lecture at
+<a href="https://mathsofpkc.sciencesconf.org/">Mathematics of Public Key Cryptography winter
+school</a>. Slides here:
+<a href="https://defeo.lu/docet">https://defeo.lu/docet</a>, lots of new material!</p>
+
+<p><strong>December 12, 2018:</strong> Habilitation defense! I am defending my habilitation thesis (HDR) today. Slides, manuscript and live stream here: <a href="https://defeo.lu/hdr">https://defeo.lu/hdr</a>.</p>
+
+    </section><!-- news -->
+
+    <section id="research">
+      <div class="page-header">
+	<h1>Research</h1>
+      </div>
+      
+      <!--h3>Research interests</h3-->
+      
+      <p>I research and develop algorithms for finite fields and algebraic
+curves, usually with applications to cryptology in mind. I tend to put
+the stress on <em>efficient</em> algorithms, both in the theoretical analysis
+and the software implementation.</p>
+
+<p>I am interested in computer algebra systems and expressive programming
+languages for doing mathematics. I like to use
+<a href="http://www.sagemath.org">Sage</a> in my investigations and I have
+distributed some <a href="#software">software</a> using it. I also am a member of
+the <a href="http://opendreamkit.org/">OpenDreamKit</a> community, seeking to
+enhance the ecosystem of computational mathematics tools.</p>
+
+
+      
+      <h3 id="students">Students</h3>
+
+<h4 id="phd">PhD</h4>
+
+<ul>
+  <li><a href="https://github.com/erou">Édouard Rousseau</a>: <em>Arithmétique
+efficace pour la cryptographie et la cryptanalyse.</em></li>
+  <li><a href="http://www.lix.polytechnique.fr/Labo/Robin.Larrieu/">Robin Larrieu</a>: <em>Fast Finite Field Arithmetic.</em></li>
+  <li><a href="https://github.com/Hugounenq-Cyril">Cyril Hugounenq</a>: <em>Réalisation
+d’algorithmes efficaces pour l’arithmétique des corps finis et des
+variétés abéliennes, avec applications à la cryptologie.</em></li>
+</ul>
+
+<h4 id="masters-theses">Masters’ theses</h4>
+
+<ul>
+  <li>Mattia Veroni: <em>Comptage de points de courbes elliptiques en moyenne caractéristique.</em></li>
+  <li>Jean Kieffer: <em>Protocoles d’échange de clefs à base d’isogénies.</em></li>
+  <li>Sébastien Besnier: <em>Participation au développement d’un framework
+pour les courbes elliptiques en Sage.</em></li>
+  <li>Ludovic Brieulle: <em>Calcul d’isomorphismes de corps finis.</em></li>
+</ul>
+
+
+      
+      <h3 class="publist" id="preprints">Preprints</h3>
+
+<p><em class="title">Verifiable Delay Functions from Supersingular Isogenies and Pairings</em>
+<em class="author">with <a href="https://members.loria.fr/SMasson/">Simon Masson</a> and <a href="https://www.cs.bham.ac.uk/~petitcz/">Christophe Petit</a> and <a href="https://blog.intothesymmetry.com/">Antonio Sanso</a></em>
+<em class="editor">submitted 2019</em>
+<a href="https://eprint.iacr.org/2019/166" class="link">https://eprint.iacr.org/2019/166</a></p>
+
+<p><em class="title">Applications of the affine geometry of GF(q<sup>n</sup>) to root finding</em>
+<em class="author">with <a href="https://www.cs.bham.ac.uk/~petitcz/">Christophe Petit</a> and Michaël Quisquater</em>
+<em class="editor">In preparation. Best poster award ISSAC 2015</em>
+<a href="https://github.com/defeo/root_finding/" class="link">https://github.com/defeo/root_finding/</a></p>
+
+<h3 class="publist" id="journal-articles">Journal articles</h3>
+
+<p><em class="title">Computing isomorphisms and embeddings of finite fields</em>
+<em class="author">with Ludovic Brieulle, Javad Doliskani, Jean-Pierre Flori and <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">to appear in Mathematics of Computation, 2018</em>
+<a href="https://doi.org/10.1090/mcom/3363" class="doi">10.1090/mcom/3363</a><br />
+<a href="https://github.com/defeo/ffisom" class="link">https://github.com/defeo/ffisom</a><br />
+<a href="https://arxiv.org/abs/1705.01221" class="link">https://arxiv.org/abs/1705.01221</a>
+<a href="https://arxiv.org/pdf/1705.01221" class="download"> </a></p>
+
+<p><em class="title">Explicit isogenies in quadratic time in any characteristic</em>
+<em class="author">with Cyril Hugounenq, Jérôme Plût and <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">LMS Journal of Computation and Mathematics, 2016, 19 (A), pp. 267-282</em>
+<a href="http://dx.doi.org/10.1112/S146115701600036X" class="doi">10.1112/S146115701600036X</a><br />
+<a href="https://arxiv.org/abs/1603.00711" class="link">https://arxiv.org/abs/1603.00711</a>
+<a href="https://arxiv.org/abs/1603.00711v1" class="download"> </a></p>
+
+<p><em class="title">Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</em>
+<em class="author">with <a href="http://djao.math.uwaterloo.ca/">David Jao</a> and Jérôme Plût</em>
+<em class="editor">Journal of Mathematical Cryptology, 2014, 8 (3), pp. 209-247</em>
+<a href="http://www.degruyter.com/view/j/jmc.2014.8.issue-3/jmc-2012-0015/jmc-2012-0015.xml" class="doi">10.1515/jmc-2012-0015</a><br />
+<a href="http://eprint.iacr.org/2011/506" class="link">http://eprint.iacr.org/2011/506</a>
+<a href="http://eprint.iacr.org/2011/506.pdf" class="download"> </a></p>
+
+<p><em class="title">Fast Arithmetics in Artin-Schreier Towers over Finite Fields</em>
+<em class="author">with <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">Journal of Symbolic Computation, 2012, 47 (7), pp. 771-792</em>
+<a href="http://dx.doi.org/10.1016/j.jsc.2011.12.008" class="doi">10.1016/j.jsc.2011.12.008</a><br />
+<a href="https://arxiv.org/abs/1002.2594" class="link">https://arxiv.org/abs/1002.2594</a>
+<a href="https://arxiv.org/pdf/1002.2594v1" class="download"> </a></p>
+
+<p><em class="title">Fast algorithms for computing isogenies between ordinary elliptic curves in small characteristic</em>
+<em class="editor">Journal of Number Theory, 2011, 131 (5), pp. 873-893</em>
+<a href="http://dx.doi.org/10.1016/j.jnt.2010.07.003" class="doi">10.1016/j.jnt.2010.07.003</a><br />
+<a href="https://www.arxiv.org/abs/1002.2597" class="link">https://www.arxiv.org/abs/1002.2597</a>
+<a href="https://www.arxiv.org/pdf/1002.2597v1" class="download"> </a></p>
+
+<p><em class="title">transalpyne: a language for automatic transposition</em>
+<em class="author">with <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">ACM SIGSAM Bulletin, 2010, 44 (1/2), pp. 59-71</em>
+<a href="http://dx.doi.org/10.1145/1838599.1838624" class="doi">10.1145/1838599.1838624</a>
+<a href="http://dl.acm.org/authorize?373407" class="download"> </a><br />
+<a href="http://hal.inria.fr/index.php?action_todo=search&amp;view_this_doc=hal-00505809" class="link">hal-00505809</a>
+<a href="http://hal.archives-ouvertes.fr/docs/00/50/58/09/PDF/Calculemus.pdf" class="download"> </a></p>
+
+<h3 class="publist" id="in-conference-proceedings">In conference proceedings</h3>
+
+<p><em class="title">Standard Lattices of Compatibly Embedded Finite Fields</em>
+<em class="author">with <a href="https://perso.telecom-paristech.fr/randriam/">Hugues Randriam</a> and <a href="https://erou.github.io/">Édouard Rousseau</a></em>
+<em class="editor">ISSAC 2019</em>
+<a href="https://doi.org/10.1145/3326229.3326251" class="doi">10.1145/3326229.3326251</a>
+<a href="https://arxiv.org/pdf/1906.00870" class="download"> </a></p>
+
+<p><em class="title">SeaSign: Compact isogeny signatures from class group actions</em>
+<em class="author">with <a href="https://www.math.auckland.ac.nz/~sgal018/">Steven Galbraith</a></em>
+<em class="editor">Eurocrypt 2019</em>
+<a href="https://doi.org/10.1007/978-3-030-17659-4_26" class="doi">10.1007/978-3-030-17659-4_26</a>
+<a href="https://eprint.iacr.org/2018/824.pdf" class="download"> </a></p>
+
+<p><em class="title">Towards practical key exchange from ordinary isogeny graphs</em>
+<em class="author">with Jean Kieffer and <a href="http://www.lix.polytechnique.fr/~smith/">Benjamin Smith</a></em>
+<em class="editor">AsiaCrypt 2018</em>
+<a href="https://doi.org/10.1007/978-3-030-03332-3_14" class="doi">10.1007/978-3-030-03332-3_14</a>
+<a href="https://eprint.iacr.org/2018/485.pdf" class="download"> </a></p>
+
+<p><em class="title">Knowledge-Based Interoperability for Mathematical Software Systems</em>
+<em class="author">with Michael Kohlhase, Dennis Müller, Markus Pfeiffer, Florian Rabe, Nicolas M. Thiéry, Victor Vasilyev and Tom Wiesing</em>
+<em class="editor">Mathematical Aspects of Computer and Information Sciences, Springer, 2017, pp. 195-210</em>
+<a href="http://dx.doi.org/10.1007/978-3-319-72453-9_14" class="doi">10.1007/978-3-319-72453-9_14</a>
+<a href="https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/12491/crc.pdf" class="download"> </a></p>
+
+<p><em class="title">Fast arithmetic for the algebraic closure of finite fields</em>
+<em class="author">with <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a> and Javad Doliskani</em>
+<em class="editor">ISSAC ‘14, July 2014, Kobe, Japan. ACM, 2014, pp. 122-129</em>
+<a href="http://defeo.lu/ff_compositum" class="link">http://defeo.lu/ff_compositum</a><br />
+<a href="http://dx.doi.org/10.1145/2608628.2608672" class="doi">10.1145/2608628.2608672</a>
+<a href="http://dl.acm.org/authorize?N82344" class="download"> </a></p>
+
+<p><em class="title">Fast algorithms for ℓ-adic towers over finite fields</em>
+<em class="author">with <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a> and Javad Doliskani</em>
+<em class="editor">ISSAC ‘13, June 2013, Boston (MA), USA. ACM, 2013, pp. 165-172</em>
+<a href="http://defeo.lu/towers" class="link">http://defeo.lu/towers</a><br />
+<a href="http://dx.doi.org/10.1145/2465506.2465956" class="doi">10.1145/2465506.2465956</a>
+<a href="http://dl.acm.org/authorize?6823128" class="download"> </a></p>
+
+<p><em class="title">Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</em>
+<em class="author">with <a href="http://djao.math.uwaterloo.ca/">David Jao</a></em>
+<em class="editor">Post-Quantum Cryptography, Nov 2011, Taipei, Taiwan. Springer, 7071, pp. 19-34</em>
+<a href="http://dx.doi.org/10.1007/978-3-642-25405-5_2" class="doi">10.1007/978-3-642-25405-5_2</a></p>
+
+<p><em class="title">Fast Arithmetics in Artin-Schreier Towers over Finite Fields</em>
+<em class="author">with <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">ISSAC ‘09, July 2009, Seoul, Korea. ACM, 2009, pp. 127-134</em>
+<a href="http://dx.doi.org/10.1145/1576702.1576722" class="doi">10.1145/1576702.1576722</a>
+<a href="http://dl.acm.org/authorize?117912" class="download"> </a></p>
+
+<h3 class="publist" id="other">Other</h3>
+
+<p><em class="title">Supersingular Isogeny Key Encapsulation</em>
+<em class="author">with R. Azarderakhsh, M. Campagna, C. Costello, B. Hess, A. Jalali, D. Jao, B. Koziel, B. LaMacchia, P. Longa, M. Naehrig, J. Renes, V. Soukharev, D. Urbanik</em>
+<em class="editor">Encryption/Key Encapsulation scheme, candidate to the <a href="https://csrc.nist.gov/Projects/Post-Quantum-Cryptography">NIST Post-Quantum Cryptography competion</a>, 2017</em>
+<a href="http://sike.org" class="link">http://sike.org</a>
+<a href="http://sike.org/files/SIDH-spec.pdf" class="download"> </a></p>
+
+<p><em class="title">Mathematics of Isogeny Based Cryptography</em>
+<em class="editor">Lecture notes, <a href="http://ema2017.lacgaa.com/">École Mathématique Africaine</a>, Thiès, Sénégal, 2017, 44 pp</em>
+<a href="https://github.com/defeo/ema2017/" class="link">https://github.com/defeo/ema2017/</a><br />
+<a href="https://arxiv.org/abs/1711.04062" class="link">https://arxiv.org/abs/1711.04062</a>
+<a href="https://arxiv.org/pdf/1711.04062" class="download"> </a></p>
+
+<h3 class="publist" id="thesis">Thesis</h3>
+
+<p><em class="title">Fast Algorithms for Towers of Finite Fields and Isogenies</em>
+<em class="author">PhD Thesis. Advisors: <a href="http://www.lix.polytechnique.fr/~morain/">François Morain</a>, <a href="https://cs.uwaterloo.ca/~eschost/">Éric Schost</a></em>
+<em class="editor">École Polytechnique, December 13, 2010. In English</em>
+<a href="https://github.com/defeo/PhD-Thesis" class="link">https://github.com/defeo/PhD-Thesis</a><br />
+<a href="https://hal.inria.fr/tel-00547034" class="link">HAL/tel-00547034</a>
+<a href="https://hal.inria.fr/tel-00547034v3/document" class="download"> </a></p>
+
+
+    </section><!-- research -->
+
+    <section id="teaching">
+      <div class="page-header">
+	<h1>Teaching</h1>
+      </div>
+      
+      <h3 id="courses">Courses</h3>
+
+<p>I teach the following courses in <a href="http://www.uvsq.fr/">UVSQ</a>. Follow
+the links for more information and course material.</p>
+
+<dl>
+  <dt><a href="http://defeo.lu/aws/" title="AWS">Applications web et sécurité</a></dt>
+  <dd><a href="http://defeo.lu/aws/" title="AWS">AWS</a>, <a href="http://www.master-secrets.uvsq.fr/">M1 Informatique</a>.</dd>
+  <dd><a href="http://defeo.lu/aws/" title="AWS">AWS</a>, <a href="http://www.isty.uvsq.fr/" title="ISTY">ISTY, IATIC4</a>.</dd>
+  <dt><a href="https://defeo.lu/M1-AlgoProg/" title="MYMAI201">Analyse d’algorithmes, programmation</a></dt>
+  <dd><a href="https://defeo.lu/M1-AlgoProg/" title="MYMAI201">MYMAI201</a>, <a href="MINT">M1 Mathématiques</a>.</dd>
+  <dt><a href="http://defeo.lu/MA2-AlgoC/" title="MSIM914">Algorithmique et programmation C</a></dt>
+  <dd><a href="http://defeo.lu/MA2-AlgoC/" title="MSIM914">MSIM914</a>, <a href="http://www.departement.math.uvsq.fr/master2AA">M2 Algèbre appliquée</a>.</dd>
+  <dt><a href="http://defeo.lu/MA2-ace/" title="MSMA910">Algèbre Commutative et effective (TDs)</a></dt>
+  <dd><a href="http://defeo.lu/MA2-ace/" title="MSMA910">MSMA910</a>, <a href="http://www.departement.math.uvsq.fr/master2AA">M2 Algèbre appliquée</a>.</dd>
+</dl>
+
+<h3 id="old-courses">Old courses</h3>
+
+<dl>
+  <dt><a href="http://defeo.lu/in202/" title="IN202">Applications de l’informatique</a></dt>
+  <dd><a href="http://defeo.lu/in202/" title="IN202">IN202</a>, L1 Informatique.</dd>
+  <dt><a href="http://defeo.lu/in310/" title="IN310">Mathématiques pour l’informatique</a></dt>
+  <dd><a href="http://defeo.lu/in310/" title="IN310">IN310</a>, L2 Informatique.</dd>
+  <dt><a href="http://defeo.lu/in420/" title="IN420">Algorithmique pour la cryptographie</a></dt>
+  <dd><a href="http://defeo.lu/in420/" title="IN420">IN420</a>, L2 Informatique.</dd>
+  <dt><a href="http://defeo.lu/esb1math/" title="ESB1MATH">Mathématiques</a></dt>
+  <dd><a href="http://defeo.lu/esb1math/" title="ESB1MATH">ESB1MATH</a>, IATIC3 (1st year engineering school).</dd>
+</dl>
+
+<h3 id="other-resources">Other resources</h3>
+
+<dl>
+  <dt><a href="http://it-katas.defeo.lu/" title="IT Katas">IT Katas</a></dt>
+  <dd>A website offering coding challenges for training in Information Theory, Coding and Cryptology.</dd>
+</dl>
+
+
+    </section><!-- teaching -->
+
+    <section id="software">
+      <div class="page-header">
+	<h1>Software</h1>
+      </div>
+      
+      <p>I collect here my main software projects. You can find more in my
+<a href="https://github.com/defeo?tab=repositories"><strong>GitHub repositories</strong></a>.</p>
+
+<h3 id="research-projects">Research projects</h3>
+
+<p>The following software are based upon <a href="#research">academic research</a>.</p>
+
+<dl>
+  <dt><a href="https://github.com/defeo/FAAST">FAAST</a></dt>
+  <dd>A library for
+  <a href="http://dx.doi.org/10.1145/1576702.1576722">Fast Arithmetic in Artin-Schreier Towers</a>.</dd>
+  <dt><a href="http://transalpyne.gforge.inria.fr/">Transalpyne</a></dt>
+  <dd>A Python implementation of the
+  <a href="http://dx.doi.org/10.1145/1838599.1838624">Transposable Algebraic Language</a>.</dd>
+  <dt><a href="https://github.com/defeo/ss-isogeny-software/">Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</a></dt>
+  <dd>A sage script implementing the cryptosystem described in
+  <a href="http://dx.doi.org/10.1007/978-3-642-25405-5_2">Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</a>.</dd>
+</dl>
+
+<h3 id="other-projects">Other projects</h3>
+
+<dl>
+  <dt><a href="https://elementslms.github.io/">eLeMents</a></dt>
+  <dd>A DIY Learning Management System based on GitHub Pages.</dd>
+  <dt><a href="https://github.com/defeo/pylagiarist">Pylagiarist</a></dt>
+  <dd>A Python script for detecting plagiarism.</dd>
+</dl>
+
+
+    </section><!-- software -->
+
+    <section id="talks">
+      <div class="page-header">
+	<h1>Selected Talks</h1>
+      </div>
+      <p>See also my collection of vulgarization material
+       at <a href="http://defeo.lu/docet">defeo.lu/docet</a>.</p>
+
+      
+      <dl>
+  <dt>Isogeny graphs</dt>
+  <dd><a href="/talks/yacc-27-09-12.pdf">Isogeny graphs in cryptography</a>.
+  <a href="http://yacc.univ-tln.fr/">YACC</a>, Centre Igesa, Porquerolles, France, September 2012.</dd>
+  <dt>Duality, transposition principle and automatic transposition of code</dt>
+  <dd><a href="/talks/plmms-08-07-10.pdf">On the transposition of computer programs</a>. <a href="http://dream.inf.ed.ac.uk/events/plmms-2010/">PLMMS</a>, CNAM, Paris, France, July 2010.</dd>
+  <dt>Computing explicit isogenies</dt>
+  <dd><a href="/talks/ecc-25-08-09.pdf">Isogeny computation in small characteristics</a>.
+  <a href="http://ecc.math.ucalgary.ca">ECC</a>, University of Calgary,
+  Calgary, Canada, August 2009.</dd>
+  <dt>Fast Arithmetic for Artin-Schreier towers</dt>
+  <dd><a href="/talks/raim-28-10-09.pdf">Fast arithmetic in Artin-Schreier towers over finite fields</a>. <a href="http://www.ens-lyon.fr/LIP/Arenaire/RAIM09/">RAIM</a>,
+  ENS, Lyon, France, October 2009.</dd>
+  <dd><a href="/talks/issac-31-07-09.pdf">Fast arithmetic in Artin-Schreier towers over finite fields</a>. <a href="http://issac2009.kias.re.kr/">ISSAC</a>, KIAS, Seoul, Korea, July 2009.</dd>
+  <dt>Other subjects</dt>
+  <dd><a href="/talks/algo-25-10-10.pdf">Fast algorithms: from type theory to number theory</a>. Séminaire
+  Algorithmes, INRIA Rocquencourt, France, October 2010.</dd>
+  <dd><a href="/talks/pisa-jun-07.pdf">Elliptic Curve Cryptography</a>. Seminario
+  d’Informatica, Università di Pisa, Italy, June 2007.</dd>
+</dl>
+
+    </section><!-- talks -->
+
+  </div>
+
+  <nav class="span1 side-nav">
+    <ul class="nav nav-tabs nav-stacked affix-top hidden-phone" data-spy="affix">
+      <li class="active"><a href="#"><i class="icon-arrow-up"></i> Top</a></li>
+      <li><a href="#whoami"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#whoami" title="Who am I">W</span>ho am I</a></li>
+      <li><a href="#news"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#news" title="News">N</span>ews</a></li>
+      <li><a href="#research"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#research" title="Research">R</span>esearch</a></li>
+      <li><a href="#teaching"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#teaching" title="Teaching">T</span>eaching</a></li>
+      <li><a href="#software"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#software" title="Software">S</span>oftware</a></li>
+      <li><a href="#talks"><i class="icon-chevron-left"></i> Tal<span data-toggle="hotkey"
+	      href="#talks" title="Talks">k</span>s</a></li>
+    </ul>
+  </nav>
+</div>
+</div> <!-- /container -->
+
+
+    <footer class="footer">
+      <div class="container">
+	<p><a rel="license"
+	   href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">
+	  <img alt="Creative Commons Licence" style="border-width:0"
+	       src="https://i.creativecommons.org/l/by/3.0/80x15.png"/>
+	</a> <a href="/">Luca De Feo</a> 2013, licensed
+	under <a rel="license"
+	href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">CC
+	BY 3.0</a>.</p>
+	
+	<p>Website designed and built
+	  by <a href="https://github.com/defeo">Luca De Feo</a>,
+	  with the help
+	  of <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+	  and <a href="http://www.initializr.com/">initializr</a>.</p>
+	<p>Source code available
+	  on <a href="https://github.com/defeo/defeo.github.io">GitHub</a>,
+	  static Website generated
+	  with <a href="http://jekyllrb.com/">Jekyll</a> and kindly
+	  hosted by <a href="http://pages.github.com/">GitHub</a>.</p>
+
+	<!--div class="addthis_toolbox addthis_default_style"
+	     addthis:url="http://">
+	  Share this page: 
+	  <a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_compact" title="More services"></a>
+
+	</div-->
+      </div>
+    </footer>
+      
+    <!-- Key shortcuts help modal -->
+    <div id="hotkey-help" data-toggle="modal" class="modal hide fade"
+	 tabindex="-1" aria-labelledby="myModalLabel"
+	 aria-hidden="true">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"
+		aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Keayboard shortcuts</h3>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="/js/jquery.hotkeys/jquery.hotkeys.js"></script>
+
+      <script src="/js/vendor/bootstrap.min.js"></script>
+
+      
+
+      
+
+      <script src="/js/main.js"></script>
+
+      <!--script>
+        var _gaq=[['_setAccount','UA-41256499-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script-->
+
+      <!-- AddThis Customization -->
+      <!--script type="text/javascript">
+	var addthis_config = {
+	  services_exclude: 'email,gmail,print',
+	  ui_click:         true,             // do not show addthis popup on hover
+	  data_ga_tracker:  'UA-41256499-1',  // GA integration
+	  data_ga_social:   true,
+	};
+      </script>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51bbb5b707779db5"></script-->
+
+  </body>
+</html>
