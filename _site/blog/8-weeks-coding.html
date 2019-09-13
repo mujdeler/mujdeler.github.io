@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head lang="en" prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>8 weeks, 60 students and 1 web application</title>
+    <meta name="twitter:title" content="8 weeks, 60 students and 1 web application">
+    <meta property="og:title" content="8 weeks, 60 students and 1 web application">
+    <meta name="twitter:card" content="summary">
+    
+    <link rel="author" href="/"> 
+    <link rel="me" href="/">
+    <!--link rel="me" href="https://plus.google.com/100246861993995854455?rel=author"-->
+    <link rel="me" href="https://github.com/defeo">
+    <link rel="me" href="https://twitter.com/@luca_defeo">
+    <meta name="twitter:site" content="@zekidem20379657">
+    <meta name="twitter:creator" content="@zekidem20379657">
+    
+    <meta name="description" content="To continue my series of posts on teaching web programming, I would
+like to share on the project students had to realize for my
+web programming course.
+
+">
+    <meta name="twitter:description" content="To continue my series of posts on teaching web programming, I would
+like to share on the project students had to realize for my
+web programming course.
+
+">
+    <meta property="og:description" content="To continue my series of posts on teaching web programming, I would
+like to share on the project students had to realize for my
+web programming course.
+
+">
+    
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      body {
+      padding-top: 60px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Luca De Feo's blog" href="/blog/feed.xml">
+
+    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body >
+
+    <!-- Global hotkey shortcuts -->
+    <span data-toggle="hotkey" data-hotkey="? shift+?" data-hotkey-trigger="hotkey.help" title="Help"></span>
+    <span data-toggle="hotkey" data-hotkey-special="/" data-hotkey-focus="#search-field" title="Search"></span>
+    <span data-toggle="hotkey" data-hotkey-special="home" href="#" title="Go to top"></span>
+    <span data-toggle="hotkey" data-hotkey-special="esc" data-hotkey-selector="input" data-hotkey-trigger="hotkey.blur" title="Unfocus text fields"></span>
+    <span data-toggle="hotkey" title=""></span>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </a>
+	  <a class="brand" href="/">Luca De Feo</a>
+	  <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="/"><i class="icon-home"></i> <span data-toggle="hotkey" href="/" title="Home">H</span>ome</a></li>
+	     <!-- <li  class="active" ><a href="/blog"><i class="icon-pencil"></i> <span data-toggle="hotkey" href="/blog" title="Blog">B</span>log</a></li>
+              <li ><a href="/cv.html"><i class="icon-user"></i> <span data-toggle="hotkey" href="/cv.html" title="CV">C</span>V</a></li> -->
+            </ul>
+	    <span data-toggle="hotkey" title="––––"></span>
+
+	    <ul id="nav-buttons" class="nav pull-right">
+	      <li>
+		<button id="hotkeys-btn" class="btn btn-inverse" title="Activate keyboard shortcuts"><i class="icon-th"></i></button>
+	      </li>
+	    </ul>
+	    
+	    <form id="search-form" class="navbar-search pull-right" action="https://www.google.com/search">
+	      <input id="search-field" type="search" class="input-medium search-query" placeholder="Site Search" name="q">
+	      <input type="hidden" name="q" value="site:mujdeler.github.io">
+	      <button id="search-glass" type="submit"><i class="icon-search"></i><span style="display:none">Search</span></button>
+	    </form>
+	  </div><!--/.nav-collapse -->
+	</div>
+      </div>
+    </nav>
+
+      <!--div id="blog-header">
+  <div class="container">
+    a scholar's insights on science, mathematical software, web programming&hellip;
+  </div>
+</div-->
+
+<div class="container">
+  <div class="row">
+  <div class="offset1 span8">
+    <article class="post" data-id="">
+      <h1>8 weeks, 60 students and 1 web application 
+	<small>June 10, 2014</small>
+      </h1>
+
+      <p>To continue my series of posts on teaching web programming, I would
+like to share on the project students had to realize for my
+<a href="http://defeo.lu/aws/">web programming course</a>.</p>
+
+<p>In past years, I used to ask the students to develop a web application
+of their likes, setting some minimum requirements to pass the
+course. I picked this from beginner courses I had been tutoring for in
+<a href="http://moodle.polytechnique.fr/course/view.php?id=5">École Polytechnique</a>
+and in <a href="http://didiode.fr/wp/">Paris VII</a>, while I was a PhD student.</p>
+
+<p>Although this formula was very successful in École Polytechnique, and
+reasonably good in Paris VII, it was very disappointing in my own
+course. I got tired of having to grade, over and over, the usual forum
+application, mostly grabbed off the Internet and poorly put
+together. Some of the best projects sure were able to blow my mind,
+like a fully functional battleship game, or an almost functional
+<a href="https://github.com/Dav-Davys/Scrabble-Chat/">multiplayer Scrabble</a>.
+But the large majority of it was just dull and boring, when it wasn’t
+cheating.</p>
+
+<p>I think the reasons for this failure sum up to: student level highly
+inhomogenous, course requirements too high for most students, course
+duration too short. Mostly the opposite of what we had in
+Polytechnique and Paris VII. I was not ready to give up on the
+requirements, so I had to find a way to force the students to keep up
+with the course and do more work.</p>
+
+<p>The directed project, to be developed during the tutoring sessions (3
+class hours per week, plus a lot of homework for most students),
+turned out to work very good. It was rather ambitious: write a
+multi-user almost-real-time
+<a href="http://en.wikipedia.org/wiki/Connect_Four">Connect-four</a>
+application. I have to admit it even flirted with the impossible: the
+last part required to push play events from the server to the clients;
+something very natural to code in Node.js, but very unnatural in
+Silex.</p>
+
+<p>The progression kept the students interested all along. They strove to
+complete all the requirements, going well beyond what they would have
+achieved on a project of their own. Almost everyone got to write some
+AJAX interaction: something I had not even dreamed of in past years. I
+was amazed to see several students complete all the requirements,
+delivering a
+<a href="https://github.com/NadiaIkhlef/puissance4">fully functional Connect-four game</a>.</p>
+
+<p>According to the polls, 80% of the students found that the course
+required more work than other masters’ courses, but they got
+relatively high grades, and 75% of them where happy about it. But
+didn’t this make cheating worse? Quite the contrary, as I will develop
+in the next post.</p>
+
+<p>One thing some students complained about was the lack of feedback on
+the quality of the work they were providing. I collected and graded
+their work twice (once mid-course, once at the end), was several weeks
+late giving grades, and could hardly have done more, given that I was
+alone grading 60 students. Also, just two numbers hardly give much
+information on what’s good and what’s bad in the code.</p>
+
+<p>Auto-graders could provide one way of improving feedback. In the
+future, I think it would be interesting to experiment with them,
+although I am afraid they could hinder the students’ creativity by not
+inspiring them to freely explore. Another interesting way in which
+auto-graders could complement the directed project would be to isolate
+and teach fundamental concepts by short, self-contained exercises
+focusing on specific skills (e.g.: navigating the DOM, building a HTTP
+response by hand, etc.).</p>
+
+<p>Given that the course already has a good deal of video material, and
+that I am planning more of it for next year, the use of auto-graders
+would make it more and more akin to a MOOC. Who knows…</p>
+
+
+      <footer>
+	<div class="tags"><i class="icon-tags"></i> tags:
+	  <ul class="inline">
+	    
+	    <li><a href="/blog/tag/web">web</a></li>
+	    
+	    <li><a href="/blog/tag/teaching">teaching</a></li>
+	    
+	  </ul>
+	</div>
+      </footer>
+    </article>
+  </div>
+
+  <div class="span2">
+    
+    <nav id="blog-nav">
+  <!--div id="tags">
+    <h4><i class="icon-tags"></i> Popular tags</h4>
+  </div>
+
+  <div id="archive">
+    <h4><i class="icon-folder-open"></i> Archive</h4>
+  </div-->
+
+  <div id="follow">
+    <h4><i class="icon-heart"></i> Follow</h4>
+    <!-- AddThis Follow BEGIN >
+    <div class="addthis_toolbox addthis_16x16_style addthis_vertical_style">
+      <a class="addthis_button_twitter_follow" addthis:userid="@luca_defeo"></a>
+      <a class="addthis_button_rss_follow" addthis:userid="/blog/feed.xml"></a>
+    </div>
+    < AddThis Follow END -->
+    <p><a href="https://twitter.com/luca_defeo"><img src="/img/twitter.png" style="height:1em"> @luca_defeo</a></p>
+  </div>
+
+  <div id="blogroll">
+    <h4><i class="icon-pencil"></i> Blogroll</h4>
+    <ul>
+      <li><a target="_blank" href="http://sagemath.blogspot.fr/">Sagemath Blog</a></li>
+      <li><a target="_blank" href="http://ellipticnews.wordpress.com/">Ellipticnews</a></li>
+      <li><a target="_blank" href="http://www.madore.org/~david/weblog/">David Madore's blog</a></li>
+      <li><a target="_blank" href="http://xkcd.com/">XKCD</a></li>
+    </ul>
+  </div>
+
+  <div id="links">
+    <h4><i class="icon-share-alt"></i> Other links</h4>
+    <ul>
+      <li><a target="_blank" href="http://sagemath.org/">Sage mathematics software</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  </div>
+</div>
+
+</div> <!-- /container -->
+
+
+    <footer class="footer">
+      <div class="container">
+	<p><a rel="license"
+	   href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">
+	  <img alt="Creative Commons Licence" style="border-width:0"
+	       src="https://i.creativecommons.org/l/by/3.0/80x15.png"/>
+	</a> <a href="/">Luca De Feo</a> 2013, licensed
+	under <a rel="license"
+	href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">CC
+	BY 3.0</a>.</p>
+	
+	<p>Website designed and built
+	  by <a href="https://github.com/defeo">Luca De Feo</a>,
+	  with the help
+	  of <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+	  and <a href="http://www.initializr.com/">initializr</a>.</p>
+	<p>Source code available
+	  on <a href="https://github.com/defeo/defeo.github.io">GitHub</a>,
+	  static Website generated
+	  with <a href="http://jekyllrb.com/">Jekyll</a> and kindly
+	  hosted by <a href="http://pages.github.com/">GitHub</a>.</p>
+
+	<!--div class="addthis_toolbox addthis_default_style"
+	     addthis:url="http://blog/8-weeks-coding">
+	  Share this page: 
+	  <a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_compact" title="More services"></a>
+
+	</div-->
+      </div>
+    </footer>
+      
+    <!-- Key shortcuts help modal -->
+    <div id="hotkey-help" data-toggle="modal" class="modal hide fade"
+	 tabindex="-1" aria-labelledby="myModalLabel"
+	 aria-hidden="true">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"
+		aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Keayboard shortcuts</h3>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="/js/jquery.hotkeys/jquery.hotkeys.js"></script>
+
+      <script src="/js/vendor/bootstrap.min.js"></script>
+
+      
+
+      
+
+      <script src="/js/main.js"></script>
+
+      <!--script>
+        var _gaq=[['_setAccount','UA-41256499-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script-->
+
+      <!-- AddThis Customization -->
+      <!--script type="text/javascript">
+	var addthis_config = {
+	  services_exclude: 'email,gmail,print',
+	  ui_click:         true,             // do not show addthis popup on hover
+	  data_ga_tracker:  'UA-41256499-1',  // GA integration
+	  data_ga_social:   true,
+	};
+      </script>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51bbb5b707779db5"></script-->
+  </body>
+</html>

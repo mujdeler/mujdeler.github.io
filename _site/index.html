@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head lang="en" prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="twitter:title" content="">
+    <meta property="og:title" content="">
+    <meta name="twitter:card" content="summary">
+    
+    <link rel="author" href="/"> 
+    <link rel="me" href="/">
+    <!--link rel="me" href="https://plus.google.com/100246861993995854455?rel=author"-->
+    <link rel="me" href="https://github.com/defeo">
+    <link rel="me" href="https://twitter.com/@luca_defeo">
+    <meta name="twitter:site" content="@zekidem20379657">
+    <meta name="twitter:creator" content="@zekidem20379657">
+    
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+      body {
+      padding-top: 60px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    <link rel="alternate" type="application/rss+xml" title="Luca De Feo's blog" href="/blog/feed.xml">
+
+    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
+  <body >
+
+    <!-- Global hotkey shortcuts -->
+    <span data-toggle="hotkey" data-hotkey="? shift+?" data-hotkey-trigger="hotkey.help" title="Help"></span>
+    <span data-toggle="hotkey" data-hotkey-special="/" data-hotkey-focus="#search-field" title="Search"></span>
+    <span data-toggle="hotkey" data-hotkey-special="home" href="#" title="Go to top"></span>
+    <span data-toggle="hotkey" data-hotkey-special="esc" data-hotkey-selector="input" data-hotkey-trigger="hotkey.blur" title="Unfocus text fields"></span>
+    <span data-toggle="hotkey" title=""></span>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </a>
+	  <a class="brand" href="/">Luca De Feo</a>
+	  <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="/"><i class="icon-home"></i> <span data-toggle="hotkey" href="/" title="Home">H</span>ome</a></li>
+	     <!-- <li ><a href="/blog"><i class="icon-pencil"></i> <span data-toggle="hotkey" href="/blog" title="Blog">B</span>log</a></li>
+              <li ><a href="/cv.html"><i class="icon-user"></i> <span data-toggle="hotkey" href="/cv.html" title="CV">C</span>V</a></li> -->
+            </ul>
+	    <span data-toggle="hotkey" title="––––"></span>
+
+	    <ul id="nav-buttons" class="nav pull-right">
+	      <li>
+		<button id="hotkeys-btn" class="btn btn-inverse" title="Activate keyboard shortcuts"><i class="icon-th"></i></button>
+	      </li>
+	    </ul>
+	    
+	    <form id="search-form" class="navbar-search pull-right" action="https://www.google.com/search">
+	      <input id="search-field" type="search" class="input-medium search-query" placeholder="Site Search" name="q">
+	      <input type="hidden" name="q" value="site:mujdeler.github.io">
+	      <button id="search-glass" type="submit"><i class="icon-search"></i><span style="display:none">Search</span></button>
+	    </form>
+	  </div><!--/.nav-collapse -->
+	</div>
+      </div>
+    </nav>
+
+      <div class="container">
+<div class="row">
+
+  <div class="offset1 span9">
+    <section class="hero-unit">
+      <div class="row-fluid">
+	<!-- <div class="span6 text-center vcard">
+	  <div class="page-header">
+	    <h2 class="fn">Luca De Feo</h2>
+	  </div> 
+	  <address class="adr ir">
+  <strong class="title">Maître de Conférences en Informatique</strong><br>
+  
+  <a href="http://www.uvsq.fr/" class="org">Université de Versailles – Saint-Quentin</a><br/>
+  <a href="http://lmv.math.cnrs.fr/">Équipe CRYPTO – Laboratoire LMV</a><br>
+  <span class="extended-address">bureau 309 B</span><br />
+  <span class="street-address">45 Avenue des États-Unis</span><br/>
+  <span class="postal-code">78035</span> 
+  <span class="locality">Versailles</span> Cedex,
+  <span class="country-name">France</span><br>
+</address>
+
+<address class="ir">
+  <strong>tel:</strong> <span class="tel">+33&nbsp;1&nbsp;39&nbsp;25&nbsp;40&nbsp;35</span><br>
+  <strong>fax:</strong> <span class="fax">+33&nbsp;1&nbsp;39&nbsp;25&nbsp;40&nbsp;57</span><br>
+  <strong>email:</strong> <span id='mungemail'></span>
+  <noscript>name.surname-with-a-dash &lt;at&gt; uvsq.fr</noscript><br>
+  <strong>ORCiD:</strong> <a class="orcid" href="https://orcid.org/0000-0002-9321-0773">
+    0000-0002-9321-0773</a><br>
+  <strong>twitter:</strong> <a class="twitter" href="https://twitter.com/@luca_defeo">
+    @luca_defeo</a><br>
+  <strong>github:</strong> <a class="github" href="https://github.com/defeo">@defeo</a><br>
+  <strong>keybase:</strong> <a class="keybase" href="https://keybase.io/defeo">defeo</a>
+  <span id="www"><br>
+  <strong>www:</strong> <a class="url" href="/">http://defeo.lu/</a>
+  </span>
+</address>
+
+	</div>-->
+
+	<div class="span6 text-center">
+	  <img src="img/sunulardan.png" class="img-rounded photo" alt="Picture">
+	</div>
+      </div>
+
+      <hr>
+
+      <div id="whoami" class="pretty">
+	<div style="display:none">
+	  <p><a href="javascript:void(0)">Hi<i class="icon-chevron-down"></i></a></p>
+	</div>
+
+	<div>
+	  
+	  
+<p>https://my.bible.com/tr/bible/2028/MAT.12.kmeya</p>
+
+	</div>
+      </div>
+    </section><!-- /home -->
+
+    <section id="Matta">
+      <div class="page-header">
+	<h1>Matta</h1>
+      </div>
+
+      
+      <p>Matta 12:7 Fakat siz: “Ben kurban değil, merhamet isterim,”Hoşea 6:6. sözünün ne demek olduğunu bilmiş olsaydınız, suçsuzları mahkûm etmezdiniz.</p>
+
+<p>Matta 10:13 Eğer evdekiler buna layıksa, dilediğiniz esenlik üzerlerinde kalsın; layık değillerse, size geri dönsün. 14 Elç.13:51 Sizi kabul etmez, sözlerinizi dinlemezlerse o evden ya da kentten ayrılırken, ayaklarınızın tozunu silkin.</p>
+
+    </section><!-- Matta -->
+
+    <section id="Hosea">
+      <div class="page-header">
+	<h1>Hoşea</h1>
+      </div>
+      
+      <!--h3>Hoşea interests</h3
+      
+      
+-->
+
+      
+      <p>Hoşea 6:6 Çünkü ben kurbandan değil, bağlılıktan hoşlanırım,
+Yakmalık sunulardan çok beni tanımanızı isterim.</p>
+
+
+      
+      
+
+    </section><!-- Hoşea -->
+
+    <section id="teaching">
+      <div class="page-header">
+	<h1>Teaching</h1>
+      </div>
+      
+      
+
+    </section><!-- teaching -->
+
+    <section id="software">
+      <div class="page-header">
+	<h1>Software</h1>
+      </div>
+      
+      
+
+    </section><!-- software -->
+
+    <section id="talks">
+      <div class="page-header">
+	<h1>Kuran</h1>
+      </div>
+      <p>jeruselam<a href="http://jeruselam.github.io">jeruselam.github.io</a>.</p>
+
+      
+      
+
+    </section><!-- talks -->
+
+  </div>
+
+  <nav class="span1 side-nav">
+    <ul class="nav nav-tabs nav-stacked affix-top hidden-phone" data-spy="affix">
+      <li class="active"><a href="#"><i class="icon-arrow-up"></i> Top</a></li>
+      <!-- <li><a href="#whoami"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#whoami" title="Müjde">M</span>üjde</a></li>-->
+      <li><a href="#Matta"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#Matta" title="Matta">M</span>atta</a></li>
+      <li><a href="#Hosea"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#Hosea" title="Hoşea">H</span>oşea</a></li>
+      <li><a href="#teaching"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#teaching" title="Teaching">T</span>eaching</a></li>
+      <li><a href="#software"><i class="icon-chevron-left"></i> <span data-toggle="hotkey"
+	      href="#software" title="Software">S</span>oftware</a></li>
+      <li><a href="#talks"><i class="icon-chevron-left"></i> Tal<span data-toggle="hotkey"
+	      href="#talks" title="Talks">k</span>s</a></li>
+    </ul>
+  </nav>
+</div>
+</div> <!-- /container -->
+
+
+    <footer class="footer">
+      <div class="container">
+	<p><a rel="license"
+	   href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">
+	  <img alt="Creative Commons Licence" style="border-width:0"
+	       src="https://i.creativecommons.org/l/by/3.0/80x15.png"/>
+	</a> <a href="/">Luca De Feo</a> 2013, licensed
+	under <a rel="license"
+	href="https://creativecommons.org/licenses/by/3.0/deed.en_GB">CC
+	BY 3.0</a>.</p>
+	
+	<p>Website designed and built
+	  by <a href="https://github.com/defeo">Luca De Feo</a>,
+	  with the help
+	  of <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>
+	  and <a href="http://www.initializr.com/">initializr</a>.</p>
+	<p>Source code available
+	  on <a href="https://github.com/defeo/defeo.github.io">GitHub</a>,
+	  static Website generated
+	  with <a href="http://jekyllrb.com/">Jekyll</a> and kindly
+	  hosted by <a href="http://pages.github.com/">GitHub</a>.</p>
+
+	<!--div class="addthis_toolbox addthis_default_style"
+	     addthis:url="http://">
+	  Share this page: 
+	  <a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_compact" title="More services"></a>
+
+	</div-->
+      </div>
+    </footer>
+      
+    <!-- Key shortcuts help modal -->
+    <div id="hotkey-help" data-toggle="modal" class="modal hide fade"
+	 tabindex="-1" aria-labelledby="myModalLabel"
+	 aria-hidden="true">
+      <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"
+		aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Keayboard shortcuts</h3>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="/js/jquery.hotkeys/jquery.hotkeys.js"></script>
+
+      <script src="/js/vendor/bootstrap.min.js"></script>
+
+      
+
+      
+
+      <script src="/js/main.js"></script>
+
+      <!--script>
+        var _gaq=[['_setAccount','UA-41256499-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script-->
+
+      <!-- AddThis Customization -->
+      <!--script type="text/javascript">
+	var addthis_config = {
+	  services_exclude: 'email,gmail,print',
+	  ui_click:         true,             // do not show addthis popup on hover
+	  data_ga_tracker:  'UA-41256499-1',  // GA integration
+	  data_ga_social:   true,
+	};
+      </script>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-51bbb5b707779db5"></script-->
+  </body>
+</html>

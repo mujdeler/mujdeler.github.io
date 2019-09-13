@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luca De Feo's blog</title>
+    <description>A blog on maths, computer science, web programming...</description>
+    <link>http://blog</link>
+    <atom:link href="http://blog/feed.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stage de M2 – Protocoles d'échange de clefs à base d'isogénies</title>
+      <description>&lt;h2 id=&quot;contexte&quot;&gt;Contexte&lt;/h2&gt;
+
+&lt;p&gt;Une &lt;em&gt;isogénie&lt;/em&gt; est un morphisme surjectif et de noyau fini de variétés
+abéliennes. Les exemples les plus simples d’isogénies sont les
+morphismes algébriques de courbes elliptiques qui préservent les
+points à l’infini.&lt;/p&gt;
+
+&lt;p&gt;La cryptographie à base d’isogénies est une des branches les plus
+jeunes de la cryptographie asymétrique. Initiée il y a seulement 10
+ans par les travaux sur les réductions de logarithmes
+discret&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, et sur les fonctions de hachage prouvablement
+sûres&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, elle s’est ensuite enrichie de protocoles d’échange de
+clef&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt;. Il existe essentiellement deux protocoles d’échange
+de clefs à base d’isogénies : un basé sur les courbes elliptiques
+&lt;em&gt;ordinaires&lt;/em&gt;&lt;sup id=&quot;fnref:5:1&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, et un autre basé sur les courbes elliptiques
+&lt;em&gt;supersingulières&lt;/em&gt;&lt;sup id=&quot;fnref:6:1&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;. Ces deux protocoles ont tous les deux
+l’intérêt de résister à des cryptanalyses par ordinateur quantique
+(algorithme de Shor), mais seulement le deuxième est considéré
+suffisamment efficace pour être utilisable en pratique.&lt;/p&gt;
+
+&lt;p&gt;Toutes les constructions cryptographiques à base d’isogénies reposent
+sur des problèmes de recherche de chemins dans des &lt;em&gt;graphes
+d’isogénies&lt;/em&gt; ; ce sont des (multi)-graphes non-orientés où les sommets
+sont des variétés abéliennes à isomorphisme près, et les arêtes sont
+les isogénies.&lt;/p&gt;
+
+&lt;p&gt;La structure des graphes d’isogénies est régie par celle des &lt;em&gt;anneaux
+d’endomorphismes&lt;/em&gt; des variétés abéliennes. Dans le cas des courbes
+elliptiques &lt;em&gt;ordinaires&lt;/em&gt;, la théorie de la &lt;em&gt;multiplication complexe&lt;/em&gt;
+lie les isogénies aux idéaux fractionnaires d’un corps de nombres
+quadratique imaginaire&lt;sup id=&quot;fnref:13&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:14&quot;&gt;&lt;a href=&quot;#fn:14&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt;. Dans le cas des courbes elliptiques
+&lt;em&gt;supersingulières&lt;/em&gt;, ce sont les idéaux à gauche des ordres maximaux
+d’une algèbre de quaternions qui jouent le même rôle&lt;sup id=&quot;fnref:13:1&quot;&gt;&lt;a href=&quot;#fn:13&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:15&quot;&gt;&lt;a href=&quot;#fn:15&quot; class=&quot;footnote&quot;&gt;10&lt;/a&gt;&lt;/sup&gt;. Ces
+théories se généralisent aux variétés abéliennes de dimension
+supérieure&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;11&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:10&quot;&gt;&lt;a href=&quot;#fn:10&quot; class=&quot;footnote&quot;&gt;12&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:12&quot;&gt;&lt;a href=&quot;#fn:12&quot; class=&quot;footnote&quot;&gt;13&lt;/a&gt;&lt;/sup&gt;, mais elles ne sont pas aussi complètes
+que pour le cas elliptique.&lt;/p&gt;
+
+&lt;h2 id=&quot;sujet-du-stage&quot;&gt;Sujet du stage&lt;/h2&gt;
+
+&lt;p&gt;Le but du stage est d’étudier le protocole d’échange de clefs de
+Rostovtsev et Stolbunov&lt;sup id=&quot;fnref:5:2&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, d’en proposer une variante efficace, et
+d’en estimer soigneusement les paramètres de sécurité par une étude
+des attaques quantiques connues.&lt;/p&gt;
+
+&lt;p&gt;On cherchera des pistes pour améliorer le protocole dans les
+techniques utilisées dans les protocoles à base d’isogénies
+supersingulières, ainsi que dans les généralisations aux dimensions
+supérieures. L’analyse de sécurité se fera en tenant compte des
+modèles de sécurité en cryptographie classique, ainsi qu’en
+cryptographie post-quantique.&lt;/p&gt;
+
+&lt;p&gt;En cas de succès, le stage pourra se poursuivre naturellement par une
+thèse en cryptographie à base de courbes elliptiques et isogénies :
+construction de nouveaux cryptosystèmes, cryptanalyse, calcul
+d’anneaux d’endomorphismes, etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;compétences-recherchées&quot;&gt;Compétences recherchées&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connaissances mathématiques en algèbre, théorie des nombres et
+géométrie (corps finis, corps de nombres, courbes elliptiques, …).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connaissances en algorithmique (par ex.: grands entiers,
+factorisation, primalité, arithmétique des courbes elliptiques).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Maîtrise d’un système de calcul formel (par ex., SageMath, Pari/GP,
+Magma).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Connaissance d’un langage de programmation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aucune connaissance en calcul quantique n’est requise, mais ceci peut
+être un plus.&lt;/p&gt;
+
+&lt;h2 id=&quot;laboratoire-daccueil&quot;&gt;Laboratoire d’accueil&lt;/h2&gt;
+
+&lt;p&gt;Le stage s’effectuera dans l’équipe
+&lt;a href=&quot;https://www.inria.fr/equipes/grace&quot;&gt;GRACE&lt;/a&gt; de l’Inria Saclay, sous la
+direction de &lt;a href=&quot;http://defeo.lu/&quot;&gt;Luca De Feo&lt;/a&gt; et de
+&lt;a href=&quot;http://www.lix.polytechnique.fr/Labo/Francois.Morain/&quot;&gt;François Morain&lt;/a&gt;.
+Le stagiaire sera amené à interagir avec le Laboratoire Cryptographie
+et Composants de l’&lt;a href=&quot;https://www.ssi.gouv.fr/&quot;&gt;ANSSI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pour candidater, envoyez un email à &lt;a href=&quot;mailto:luca.de-feo@uvsq.fr&quot;&gt;luca.de-feo@uvsq.fr&lt;/a&gt; en joignant votre
+CV et une lettre de motivation.&lt;/p&gt;
+
+&lt;h2 id=&quot;bibliographie&quot;&gt;Bibliographie&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Galbraith, Hess et Smart.
+&lt;a href=&quot;https://researchspace.auckland.ac.nz/bitstream/handle/2292/26672/eurowithcoversheet.pdf?sequence=6&quot;&gt;Extending the GHS Weil descent attack&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Jao, Miller et Venkatesan.
+&lt;a href=&quot;https://arxiv.org/pdf/math/0411378.pdf&quot;&gt;Do all elliptic curves of the same order have the same difficulty of discrete log?&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Teske.
+&lt;a href=&quot;http://eprint.iacr.org/2003/058/20030401:012139&quot;&gt;An elliptic curve trapdoor system&lt;/a&gt;. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Charles, Goren et Lauter.
+&lt;a href=&quot;http://eprint.iacr.org/2006/021.pdf&quot;&gt;Cryptographic hash functions from expander graphs&lt;/a&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;Rostovtsev et Stolbunov.
+&lt;a href=&quot;http://eprint.iacr.org/2006/145.pdf&quot;&gt;Public-Key Cryptosystem Based on Isogenies&lt;/a&gt;. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:5:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; &lt;a href=&quot;#fnref:5:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Jao et De Feo.
+&lt;a href=&quot;http://cacr.uwaterloo.ca/techreports/2011/cacr2011-32.pdf&quot;&gt;Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies&lt;/a&gt;. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:6:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;De Feo, Jao et Plût.
+&lt;a href=&quot;https://eprint.iacr.org/2011/506.pdf&quot;&gt;Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies&lt;/a&gt;. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:13&quot;&gt;
+      &lt;p&gt;Kohel.
+&lt;a href=&quot;http://echidna.maths.usyd.edu.au/~kohel/pub/thesis.pdf&quot;&gt;Endomorphism rings of elliptic curves over finite fields&lt;/a&gt;. &lt;a href=&quot;#fnref:13&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:13:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:14&quot;&gt;
+      &lt;p&gt;Fouquet et Morain.
+&lt;a href=&quot;http://link.springer.com/chapter/10.1007/3-540-45455-1_23#page-1&quot;&gt;Isogeny volcanoes and the SEA algorithm&lt;/a&gt;. &lt;a href=&quot;#fnref:14&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:15&quot;&gt;
+      &lt;p&gt;Belding.
+&lt;a href=&quot;http://www.math.harvard.edu/~jbelding/MainThesis.pdf&quot;&gt;Number theoretic algorithms for elliptic curves&lt;/a&gt;. &lt;a href=&quot;#fnref:15&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;Bisson, Cosset et Robert.
+&lt;a href=&quot;http://avisogenies.gforge.inria.fr/&quot;&gt;AVIsogenies&lt;/a&gt;, a library for
+computing isogenies between abelian varieties &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:10&quot;&gt;
+      &lt;p&gt;Ionica et Thomé.
+&lt;a href=&quot;https://arxiv.org/pdf/1407.6672.pdf&quot;&gt;Isogeny graphs with maximal real multiplication&lt;/a&gt;. &lt;a href=&quot;#fnref:10&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:12&quot;&gt;
+      &lt;p&gt;Brooks, Jetchev et Wesolowski.
+&lt;a href=&quot;https://arxiv.org/pdf/1609.09793.pdf&quot;&gt;Isogeny graphs of ordinary abelian varieties&lt;/a&gt;. &lt;a href=&quot;#fnref:12&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      <pubDate>Mon, Oct 31, 2016 00:00:00 -0500</pubDate>
+      <link>http://blog/internship/internship-RS</link>
+      <guid isPermaLink="true">http://blog/internship/internship-RS</guid>
+    </item>
+    
+    <item>
+      <title>8 weeks and 60 students with Cloud9</title>
+      <description>&lt;p&gt;I would like to finish my series on teaching web programming with a
+report on how the online IDE &lt;a href=&quot;http://c9.io&quot;&gt;Cloud9&lt;/a&gt; helped improve my
+students productivity.&lt;/p&gt;
+
+&lt;p&gt;As you might know if you
+&lt;a href=&quot;http://www.letudiant.fr/educpros/enquetes/crise-a-l-universite-versailles-saint-quentin-uvsq-la-communaute-dans-l-incertitude.html&quot;&gt;read French newspapers&lt;/a&gt;,
+UVSQ is a university on a low budget. The department has only one
+computer room, and it is best avoided. Students bring their own
+laptops to tutorials, or they can borrow one from the library.&lt;/p&gt;
+
+&lt;p&gt;When I gave my course the first year, several precious tutoring hours
+were lost installing, configuring and debugging WAMPs, LAMPs and
+virtual machines. The switch to &lt;a href=&quot;http://nodejs.org&quot;&gt;Node.js&lt;/a&gt; eased
+things up: installation was generally smooth, apart for some version
+problems on Ubuntu machines and missing SQLite interfaces for
+Windows. Both years, I had to teach the students, especially those not
+on Linux, how to launch and use a terminal.&lt;/p&gt;
+
+&lt;p&gt;Having decided to go back to PHP, I absolutely wanted to avoid the
+painful installation of Apache and stacks. The cloud IDE Cloud9 looked
+like a promising alternative, lifting the burden of handling dozens of
+different configurations.&lt;/p&gt;
+
+&lt;p&gt;Cloud9 is a commercial product, offering free unlimited workspaces for
+public development, plus one private workspace.  It has some
+integration with GitHub, BitBucket and Heroku, and some limited
+history and collaboration features are also available for free
+accounts.  It can natively execute and debug Node.js instances, or run
+PHP applications via Apache (other runtimes are also supported). It
+includes a MySQL and a MongoDB server for development.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-good&quot;&gt;The good&lt;/h3&gt;
+
+&lt;p&gt;Thanks to Cloud9, the only problems left to solve on the first
+tutorial were laptops not connecting to the network, and students
+having confirmation emails from Cloud9 delayed or blocked by their
+provider.&lt;/p&gt;
+
+&lt;p&gt;Once they were connected to the Cloud9 dashboard, the students could
+get started coding immediately by cloning the
+&lt;a href=&quot;https://github.com/defeo/aws-project&quot;&gt;project skeleton&lt;/a&gt; I had hosted
+for them on GitHub. From then on they could work on their project (no
+knowledge of git required), while I could update their configuration
+files by asking them to pull. Some students eventually managed to mess
+with their local git clone, but fixing it was a minor annoyance
+overall.&lt;/p&gt;
+
+&lt;p&gt;Previewing static html files and running apps is as easy as a button
+click: all students quickly caught the workflow, although some of them
+were slow to grasp the difference between viewing static files and
+running apps.&lt;/p&gt;
+
+&lt;p&gt;Because all projects are public, I could connect to the students’
+workspaces at any time and observe their work live. This was useful in
+the classroom, but even more important when addressing help requests
+out of the class. The embedded chat room was also very useful when
+helping students from home. Beyond the IDE front-end, each workspace
+also offers a publicly accessible webdav directory. This let me easily
+crawl and download all the students’ work for local examination and
+grading. I found this very convenient for the first part of the
+course, where only client code was involved. At least in one case, my
+local copy also served as a back-up save for a student who had
+&lt;em&gt;accidentally&lt;/em&gt; erased all her work.&lt;/p&gt;
+
+&lt;p&gt;However, visitors to workspaces do not have the rights to run
+processes, hence they cannot run server code. When the students
+started writing server code and using SQL, reproducing their
+environment locally turned out to be too painful. Thus, I had to
+resort to asking them for write permissions on their workspaces, which
+also turned out to be a very convenient way to help them fixing Cloud9
+glitches from a distance. In retrospect, I should have asked write
+permissions from the beginning.&lt;/p&gt;
+
+&lt;p&gt;Finally, some comments on cheating. Yes, any student could see any
+other student’s work, if he could guess his colleague’s login and
+workspace name. This is in my opinion very good, and most students
+used it constructively: taking example from their comrades’ code,
+using the chat to help each other, and even collaborating on
+code. Obviously some students didn’t refrain from using it to cheat,
+and some went even as far as creating Cloud9 accounts with logins
+similar to mine, so to not awake suspicions in their comrades. In
+reaction, some of the good students created accounts with unguessable
+usernames, or used the one free private project.&lt;/p&gt;
+
+&lt;p&gt;However it wasn’t too hard to unmask the cheaters. My own
+&lt;a href=&quot;https://github.com/defeo/pylagiarist&quot;&gt;plagiarism detection scripts&lt;/a&gt;
+helped me narrow down the hunt, Cloud9 history tool did the rest: by
+rewinding history, I could easily know when the students had been
+working, when the copy-paste had happened, and what variables had been
+renamed. Not only I had a very easy time detecting cheating, but I
+even had irrefutable proofs of it.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-bad&quot;&gt;The bad&lt;/h3&gt;
+
+&lt;p&gt;Cloud9 wasn’t all joys and wonders. For one, it requires a good
+network connection to function properly. Wifi connections, such as
+eduroam, are likely to give a horrible experience. As obvious as this
+may sound, some students kept forgetting or refusing to bring ethernet
+cables: I had to always bring a stock with me.&lt;/p&gt;
+
+&lt;p&gt;Even on a wired connection, though, most students experienced serious
+problems. The IDE would often lock one file or freeze completely, the
+only solution being reloading. Before I prompted the students to
+enable auto-saving, network errors would occasionally destroy one hour
+worth of work. After they enabled auto-saving, some students
+experienced severe slow-downs of the interface, and even then some
+work was occasionally lost. Sometimes, after recovering from a freeze,
+some files would be empty; a peak at the history would usually yield
+all the contents back, but restoring previous versions is horribly
+clumsy in the free version of Cloud9.&lt;/p&gt;
+
+&lt;p&gt;About a dozen of workspaces got locked at some point, with the
+interface simply not able to read the filesystem. This required the
+intervention of Cloud9 staff, often holding the student from working
+for the rest of the day. In March, we were also unlucky enough to
+experience a major platform problem affecting POST requests right
+before a submission deadline.&lt;/p&gt;
+
+&lt;p&gt;Overall the use of Cloud9 turned out to be very frustrating for some
+students. I wonder if the time gained by not having to install
+anything locally wasn’t compensated by the time lost fighting Cloud9
+glitches. Thankfully, Cloud9 staff was very kind and responsive, and
+usually solved all problems in one day’s time.&lt;/p&gt;
+
+&lt;p&gt;To my surprise, more than 50% of the students thought very well of
+Cloud9, grading it 4/5 or 5/5. In the end, I think the experiment
+turned out well, and, whatever platform I am going to use next year,
+there is no going back to the dear old local install. Beyond being
+stable and not loosing data, my ideal platform would:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use Cloud9 IDE as front-end, or similar.&lt;/li&gt;
+  &lt;li&gt;Let me manage my group of students, view their projects, and
+automatically grant me write privileges on their repositories.&lt;/li&gt;
+  &lt;li&gt;Keep history robustly and often (e.g., using auto-save and Git).&lt;/li&gt;
+  &lt;li&gt;Do not allow the students to create multiple logins, and force them
+to be connected in order to use the platform.&lt;/li&gt;
+  &lt;li&gt;Simplify some workflows (e.g., using the MySQL database).&lt;/li&gt;
+  &lt;li&gt;Redirect PHP logs to the IDE console.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Maybe this can be achieved by installing the open source version of
+Cloud9 on a university server with a customized back-end. I will
+likely be experimenting with this before next year’s course.&lt;/p&gt;
+
+&lt;h3 id=&quot;appendix&quot;&gt;Appendix&lt;/h3&gt;
+
+&lt;p&gt;For reference, I report here some non-trivial configuration details
+and bug fixes that I had to apply during the course.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Due to bugs in Cloud9, or to bugs in the students code, the
+interface may freeze repeatedly. While it is not guaranteed to work, adding
+&lt;code class=&quot;highlighter-rouge&quot;&gt;?reset=1&lt;/code&gt; to the workspace URL may help fixing problems. It simply
+returns the workspace to its initial state: no files open, no
+previews, no applications running. Here’s one funny case where this
+was useful: a student had written an infinite loop in JavaScript,
+and opened its web page in the “Preview” tab. The preview would
+freeze the whole interface and crash the browser tab. But at each
+reload Cloud9 would open again the “Preview” tab… and crash again!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a &lt;code class=&quot;highlighter-rouge&quot;&gt;php.ini&lt;/code&gt; file is placed in a Cloud9 workspace, its settings
+supersede the global ones. This has various uses: activate sessions,
+printing errors, etc. One important use for Silex: the PHP package
+manager &lt;a href=&quot;https://getcomposer.org/&quot;&gt;Composer&lt;/a&gt; wants the setting
+&lt;code class=&quot;highlighter-rouge&quot;&gt;date.timezone&lt;/code&gt; to be set.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Integration with PHPMyAdmin is sure in the plans for Cloud9, but not
+ready yet. The simplest solution for me was to ship a lightweight
+open source MySQL manager, &lt;a href=&quot;http://sqlbuddy.com/&quot;&gt;SqlBuddy&lt;/a&gt;,
+together with the project skeleton.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;One of the most annoying bugs, happening almost systematically,
+prevents the MySQL server from starting after a workspace
+freeze. This is a known bug with a fix documented
+&lt;a href=&quot;http://support.cloud9ide.com/entries/23091380-Recover-MySQL-permissions&quot;&gt;here&lt;/a&gt;,
+but, had I known it before, it would not have hold so many students
+for the entire tutorial following spring break (during which many
+workspaces froze).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finally, one of the most random problems was caused by GitHub. The
+students working with Silex had to install it in Cloud9, together
+with its dependencies. I had given a &lt;code class=&quot;highlighter-rouge&quot;&gt;composer.json&lt;/code&gt; file, so that
+they just had to run Composer in the Cloud9 terminal in order to
+download and install everything. Composer connects to GitHub’s API,
+and GitHub limits anonymous requests to 60 per hour per IP. Since
+every user in Cloud9 has the same IP, chances are that some student
+may get rate limited. Fortunately Composer will fail with a
+meaningful error message, and will ask for a GitHub login in order
+to solve the problem. Unfortunately, the average student will not
+have a GitHub account, and will not understand what the message is
+asking for, so if this happens outside the class, expect an email. I
+was lucky: this happened only once. Another fix is described
+&lt;a href=&quot;http://fortrabbit.com/docs/how-to/misc/github-api-limits&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <pubDate>Wed, Jun 11, 2014 00:00:00 -0500</pubDate>
+      <link>http://blog/8-weeks-with-C9</link>
+      <guid isPermaLink="true">http://blog/8-weeks-with-C9</guid>
+    </item>
+    
+    <item>
+      <title>8 weeks, 60 students and 1 web application</title>
+      <description>&lt;p&gt;To continue my series of posts on teaching web programming, I would
+like to share on the project students had to realize for my
+&lt;a href=&quot;http://defeo.lu/aws/&quot;&gt;web programming course&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In past years, I used to ask the students to develop a web application
+of their likes, setting some minimum requirements to pass the
+course. I picked this from beginner courses I had been tutoring for in
+&lt;a href=&quot;http://moodle.polytechnique.fr/course/view.php?id=5&quot;&gt;École Polytechnique&lt;/a&gt;
+and in &lt;a href=&quot;http://didiode.fr/wp/&quot;&gt;Paris VII&lt;/a&gt;, while I was a PhD student.&lt;/p&gt;
+
+&lt;p&gt;Although this formula was very successful in École Polytechnique, and
+reasonably good in Paris VII, it was very disappointing in my own
+course. I got tired of having to grade, over and over, the usual forum
+application, mostly grabbed off the Internet and poorly put
+together. Some of the best projects sure were able to blow my mind,
+like a fully functional battleship game, or an almost functional
+&lt;a href=&quot;https://github.com/Dav-Davys/Scrabble-Chat/&quot;&gt;multiplayer Scrabble&lt;/a&gt;.
+But the large majority of it was just dull and boring, when it wasn’t
+cheating.&lt;/p&gt;
+
+&lt;p&gt;I think the reasons for this failure sum up to: student level highly
+inhomogenous, course requirements too high for most students, course
+duration too short. Mostly the opposite of what we had in
+Polytechnique and Paris VII. I was not ready to give up on the
+requirements, so I had to find a way to force the students to keep up
+with the course and do more work.&lt;/p&gt;
+
+&lt;p&gt;The directed project, to be developed during the tutoring sessions (3
+class hours per week, plus a lot of homework for most students),
+turned out to work very good. It was rather ambitious: write a
+multi-user almost-real-time
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Connect_Four&quot;&gt;Connect-four&lt;/a&gt;
+application. I have to admit it even flirted with the impossible: the
+last part required to push play events from the server to the clients;
+something very natural to code in Node.js, but very unnatural in
+Silex.&lt;/p&gt;
+
+&lt;p&gt;The progression kept the students interested all along. They strove to
+complete all the requirements, going well beyond what they would have
+achieved on a project of their own. Almost everyone got to write some
+AJAX interaction: something I had not even dreamed of in past years. I
+was amazed to see several students complete all the requirements,
+delivering a
+&lt;a href=&quot;https://github.com/NadiaIkhlef/puissance4&quot;&gt;fully functional Connect-four game&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;According to the polls, 80% of the students found that the course
+required more work than other masters’ courses, but they got
+relatively high grades, and 75% of them where happy about it. But
+didn’t this make cheating worse? Quite the contrary, as I will develop
+in the next post.&lt;/p&gt;
+
+&lt;p&gt;One thing some students complained about was the lack of feedback on
+the quality of the work they were providing. I collected and graded
+their work twice (once mid-course, once at the end), was several weeks
+late giving grades, and could hardly have done more, given that I was
+alone grading 60 students. Also, just two numbers hardly give much
+information on what’s good and what’s bad in the code.&lt;/p&gt;
+
+&lt;p&gt;Auto-graders could provide one way of improving feedback. In the
+future, I think it would be interesting to experiment with them,
+although I am afraid they could hinder the students’ creativity by not
+inspiring them to freely explore. Another interesting way in which
+auto-graders could complement the directed project would be to isolate
+and teach fundamental concepts by short, self-contained exercises
+focusing on specific skills (e.g.: navigating the DOM, building a HTTP
+response by hand, etc.).&lt;/p&gt;
+
+&lt;p&gt;Given that the course already has a good deal of video material, and
+that I am planning more of it for next year, the use of auto-graders
+would make it more and more akin to a MOOC. Who knows…&lt;/p&gt;
+</description>
+      <pubDate>Tue, Jun 10, 2014 00:00:00 -0500</pubDate>
+      <link>http://blog/8-weeks-coding</link>
+      <guid isPermaLink="true">http://blog/8-weeks-coding</guid>
+    </item>
+    
+    <item>
+      <title>8 weeks and 60 students with Silex</title>
+      <description>&lt;p&gt;From February to May, I have taught my usual eight weeks
+&lt;a href=&quot;http://defeo.lu/aws/&quot;&gt;web programming course&lt;/a&gt; at Université de
+Versailles. The course, called &lt;em&gt;Applications Web et Sécurité&lt;/em&gt; (Web
+Applications and Security) is aimed at first year masters’ students
+with a computer science major. This is the third time I have taught
+this course, and for the third time I have messed up with most of the
+syllabus in search of the magic formula. I haven’t found it yet, but I
+think I got a bit closer.&lt;/p&gt;
+
+&lt;p&gt;This year’s course was different from the previous ones in many
+ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Class material was written in French.&lt;/li&gt;
+  &lt;li&gt;Tutorials were structured so to construct a full web application
+from the ground up. The design was mostly given in the syllabus. All
+students had to implement the same application, individually or in
+pairs. I would give marks to the final product, which would account
+for one third of the course grade.&lt;/li&gt;
+  &lt;li&gt;Students had the choice to develop the application in
+&lt;a href=&quot;http://silex.sensiolabs.org/&quot;&gt;Silex&lt;/a&gt;, or
+&lt;a href=&quot;http://nodejs.org/&quot;&gt;Node.js&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;All development was done in the cloud, using the online IDE
+&lt;a href=&quot;https://c9.io/&quot;&gt;Cloud9&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I am going to share my experience in a series of blog posts, hoping to
+spark some thoughts/reactions/new ideas among my colleagues teaching
+similar subjects. I will start by discussing the technologies I chose.&lt;/p&gt;
+
+&lt;p&gt;The first year I gave this course, I taught standard PHP+MySQL over a
+WAMP, LAMP or MAMP stack; a common choice for this kind of course,
+also inherited from my previous experiences. The course was a big
+success.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I hate PHP. The next year, I switched to native Node.js
+(no &lt;a href=&quot;http://expressjs.com/&quot;&gt;Express&lt;/a&gt;), with
+&lt;a href=&quot;http://mustache.github.io/&quot;&gt;Mustache&lt;/a&gt; and SQLite/MySQL. Along the
+way, I wrote a
+&lt;a href=&quot;https://github.com/defeo/was_framework/&quot;&gt;micro-framework&lt;/a&gt; to guide
+the students in their development. The course was a disaster. Almost
+half of the students dropped the course midway. Of those who stayed,
+most could not grasp the basic concepts behind Node.js. I ended up
+receiving dozens of version of the classic chat room on web sockets
+app: I had not taught web sockets, but chat rooms were basically the
+only examples written in Node.js one could find on the Internet at the
+time.&lt;/p&gt;
+
+&lt;p&gt;Why was it so hard? The answer is: “basics”. Most of the students could
+not grasp the concept of callback, let alone event-driven design!
+Also, Node.js was not as popular as it is now: most students were
+expecting a PHP course (two thirds of the students already know some
+PHP), also in consideration of their employment
+perspectives. Fortunately, the usual handful of very good students was
+there to cheer me up.&lt;/p&gt;
+
+&lt;p&gt;So this year I had to go back to more familiar grounds, but I didn’t
+want to loose the work done with Node, and still wanted to keep some
+of the clean separation of concerns achieved by it. I first thought of
+&lt;a href=&quot;http://symfony.com/&quot;&gt;Symfony&lt;/a&gt;: a very elegant PHP framework, open
+source, developed in France, and enjoying high demand from the
+industry. However, Symfony is a mastodon, with too much magic
+happening under the covers. By reading more about Symfony, I
+discovered &lt;a href=&quot;http://silex.sensiolabs.org/&quot;&gt;Silex&lt;/a&gt;, a PHP
+micro-framework developed by the same company as Symfony, open source,
+remarkably similar to Node.&lt;/p&gt;
+
+&lt;p&gt;The match was perfect, I can even say Silex reconciled me with
+PHP. All the concepts I wanted to teach exist almost identically in
+Silex and Node (with Express, this time): HTTP, routers, views,
+template languages (&lt;a href=&quot;http://twig.sensiolabs.org/&quot;&gt;Twig&lt;/a&gt; was a natural
+choice), DBALs, AJAX, REST APIs, Server push, security, …  I could
+lecture on the theoretical principles giving examples both in PHP and
+Node, while the tutorials would have to be specialized for each
+language. This required a little more work on the tutorials, but
+nothing very serious (especially when compared with the huge amount of
+work the rest of the course gave me). I made very clear from the
+beginning that Node.js is for the good students, and that the
+&lt;em&gt;official&lt;/em&gt; framework for the course is Silex. This had the perverse
+effect of pushing even some of the best students towards Silex (only 4
+of 60 students chose Node), but I am confident that those ones will go
+back and have a look at Node anyway.&lt;/p&gt;
+
+&lt;p&gt;The cleanliness and lightness of the micro-frameworks made it possible
+to focus on fundamental low level details, and most importantly did
+not impose a specific pattern, such as MVC. Lecturing with two
+languages helped the students visualize the separation between coding
+patterns and actual technology.&lt;/p&gt;
+
+&lt;p&gt;I was afraid that students with a background in PHP would be reluctant
+to change their coding habits and learn how to use a modern framework
+and a template language. However this turned out to be a minor
+problem: it was enough to clearly state once or twice that they had to
+forget everything they knew about PHP. Most of the students, beginners
+and not, understood the added value of those modern tools on their
+employability, and happily followed the dense syllabus and adhered to
+its principles.&lt;/p&gt;
+
+&lt;p&gt;To conclude, I am really happy with the two technologies I chose and
+with the style of lecturing this implied. What’s most important, the
+students where happy too. At this stage, it does not seem implausible
+that I may add a third framework to the course someday (Python with
+&lt;a href=&quot;http://flask.pocoo.org/&quot;&gt;Flask&lt;/a&gt; comes to the mind).&lt;/p&gt;
+
+</description>
+      <pubDate>Thu, Jun 05, 2014 00:00:00 -0500</pubDate>
+      <link>http://blog/8-weeks-w-silex</link>
+      <guid isPermaLink="true">http://blog/8-weeks-w-silex</guid>
+    </item>
+    
+    <item>
+      <title>The Website Opens</title>
+      <description>&lt;p&gt;&lt;strong&gt;The new website is opening today!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is still under heavy development, but you can already enjoy its
+basic features. The blog is not completely functional yet, come back
+soon!&lt;/p&gt;
+</description>
+      <pubDate>Fri, Jun 28, 2013 00:00:00 -0500</pubDate>
+      <link>http://blog/the-website-opens</link>
+      <guid isPermaLink="true">http://blog/the-website-opens</guid>
+    </item>
+    
+  </channel>
+</rss>
