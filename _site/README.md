@@ -1,2 +1,0 @@
-# mujdeler.github.io
-İncil
