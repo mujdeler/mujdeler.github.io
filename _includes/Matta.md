@@ -4,4 +4,6 @@
  
  Matta 10:17 İnsanlardan sakının. Çünkü sizi mahkemelere verecek, havralarında kamçılayacaklar. 18 Benden ötürü valilerin, kralların önüne çıkarılacak, böylece onlara ve uluslara tanıklık edeceksiniz. 19 Sizleri mahkemeye verdiklerinde, neyi nasıl söyleyeceğinizi düşünerek kaygılanmayın. Ne söyleyeceğiniz o anda size bildirilecek. 20 Çünkü konuşan siz değil, aracılığınızla konuşan Allah'ın Ruhu olacak.
  
+ Matta 10:26 “Bu yüzden onlardan korkmayın. Çünkü örtülü olup da açığa çıkarılmayacak, gizli olup da bilinmeyecek hiçbir şey yoktur. 27 Size karanlıkta söylediklerimi, siz gün ışığında söyleyin. Kulağınıza fısıldananı, damlardan duyurun. 28 Bedeni öldüren, ama canı öldüremeyenlerden korkmayın. Canı da bedeni de cehennemde mahvedebilen Allah'dan korkun.
+ 
  Matta 12:7 Fakat siz: “Ben kurban değil, merhamet isterim,”Hoşea 6:6. sözünün ne demek olduğunu bilmiş olsaydınız, suçsuzları mahkûm etmezdiniz.
