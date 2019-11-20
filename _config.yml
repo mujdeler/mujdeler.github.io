@@ -1,7 +1,7 @@
 base: /
 permalink: /blog/:categories/:title
 
-#paginate: 5
+#1paginate: 5
 #paginate_path: /blog/:num
 
 twitter_user: "@zekidem20379657"
