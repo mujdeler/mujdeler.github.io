@@ -12,8 +12,7 @@
  
  Matta 15: 10İsa, halkı yanına çağırıp onlara, “Dinleyin ve şunu belleyin” dedi. 11“Ağızdan giren şey insanı kirletmez. İnsanı kirleten ağızdan çıkandır.”
  
- Matta 15: 16“Siz de mi hâlâ anlamıyorsunuz?” diye sordu İsa. 17“Ağza giren her şeyin mideye indiğini, oradan da helaya atıldığını bilmiyor musunuz? 18Mat.12:34 Ne var ki ağızdan çıkan, yürekten kaynaklanır. İnsanı kirleten de budur. 19Çünkü kötü düşünceler, cinayet, zina, fuhuş, hırsızlık, yalan yere tanıklık ve iftira hep yürekten kaynaklanır. 20İnsanı kirleten bunlardır. Yıkanmamış ellerle yemek yemek insanı kirletmez.”
- 
+ Matta 15: Anlamıyor musunuz ki, ağıza giren her şey mideye iner, oradan geçip dışarı çıkar.  Oysa ağızdan çıkan şeyler yürekten kaynaklanır. İşte bunlardır insanı kirleten.  Çünkü kötü düşünceler yürekten kaynaklanır: Adam öldürme, zina, fuhuş, hırsızlık, yalancı tanıklık, sövüp sayma. İnsanı kirleten şeyler işte bunlardır. Yıkanmamış ellerle yemek yemek ise insanı kirletmez.”
  
  
  
